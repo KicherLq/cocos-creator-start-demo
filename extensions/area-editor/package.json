@@ -1,0 +1,121 @@
+{
+    "name": "area-editor",
+    "package_version": 2,
+    "version": "1.0.0",
+    "title": "扩展编辑器",
+    "description": "扩展编辑器",
+    "main": "./dist/main.js",
+    "panels": {
+        "common": {
+            "title": "通用配置",
+            "type": "simple",
+            "main": "./dist/panels/common/index.js",
+            "size": {
+                "width": 800,
+                "height": 600
+            },
+            "flags": {
+                "resizable": true,
+                "alwaysOnTop": true
+            }
+        },
+        "functions": {
+            "title": "大厅入口编辑",
+            "type": "simple",
+            "main": "./dist/panels/hall/index.js",
+            "size": {
+                "width": 1280,
+                "height": 600
+            },
+            "flags": {
+                "resizable": false,
+                "alwaysOnTop": true
+            }
+        }
+    },
+    "contributions": {
+        "menu": [
+            {
+                "path": "i18n:menu.extension/扩展",
+                "label": "通用配置",
+                "message": "function-panel_common"
+            },
+            {
+                "path": "i18n:menu.extension/扩展",
+                "label": "大厅入口编辑",
+                "message": "function-panel"
+            },
+            {
+                "path": "i18n:menu.help",
+                "label": "模板文档",
+                "message": "function-panel_doc"
+            }
+        ],
+        "assets": {
+            "menu": {
+                "methods": "./dist/assets-menu.js",
+                "createMenu": "onCreateMenu",
+                "assetMenu": "onAssetMenu"
+            }
+        },
+        "messages": {
+            "function-panel": {
+                "methods": [
+                    "openFunctions"
+                ]
+            },
+            "function-panel_common": {
+                "methods": [
+                    "openFunctionsCommon"
+                ]
+            },
+            "function-panel_doc" : {
+                "methods": [
+                    "openDoc"
+                ]
+            }
+        },
+        "scene": {
+            "script": "./dist/scene.js"
+        }
+    },
+    "dependencies": {
+        "crypto": "^1.0.1",
+        "glob": "^7.2.0",
+        "gulp-browserify": "^0.5.1",
+        "gulp-clean": "^0.4.0",
+        "gulp-concat": "^2.6.1",
+        "gulp-debug": "^4.0.0",
+        "gulp-javascript-obfuscator": "^1.1.6",
+        "gulp-notify": "^3.2.0",
+        "gulp-rename": "^2.0.0",
+        "gulp-sourcemaps": "^2.6.5",
+        "gulp-typescript": "^6.0.0-alpha.1",
+        "gulp-uglify": "^3.0.2",
+        "merge2": "^1.4.1",
+        "protobufjs": "^6.11.3",
+        "request": "^2.88.2",
+        "tfig": "^3.1.1",
+        "through2": "^4.0.2",
+        "ts-node": "^9.1.1",
+        "yargs": "^16.0.3"
+    },
+    "devDependencies": {
+        "@types/google-protobuf": "^3.15.6",
+        "@types/node": "^17.0.23",
+        "@typescript-eslint/eslint-plugin": "^5.6.0",
+        "@typescript-eslint/parser": "^5.6.0",
+        "eslint": "^8.4.1",
+        "eslint-config-alloy": "^4.4.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-autofix": "^1.1.0",
+        "eslint-plugin-eqeqeq-fix": "^1.0.3",
+        "eslint-plugin-unused-imports": "^2.0.0",
+        "gulp": "^4.0.2",
+        "gulp-filter": "^7.0.0",
+        "lint-staged": "^12.1.2",
+        "modclean": "^3.0.0-beta.1",
+        "prettier": "^2.5.1",
+        "typedoc": "^0.22.0"
+    }
+}

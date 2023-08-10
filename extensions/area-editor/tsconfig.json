@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "module": "commonjs",
+        "experimentalDecorators": true,
+        "skipLibCheck": true,
+        "noImplicitAny": false,
+        "isolatedModules": true,
+        "removeComments": false,
+        "declaration": true,
+        "allowJs": true,
+        "lib": ["dom", "es7"],
+        "esModuleInterop": true,
+        "outDir": "./dist",
+        "rootDir": "./source"
+    },
+
+    "exclude": ["./dist"],
+    "include": ["./source"]
+}

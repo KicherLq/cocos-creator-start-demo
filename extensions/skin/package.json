@@ -1,0 +1,96 @@
+{
+    "package_version": 2,
+    "version": "1.0.0",
+    "name": "skin",
+    "description": "i18n:skin.description",
+    "main": "./dist/main.js",
+    "devDependencies": {
+        "@types/node": "^16.0.1",
+        "typescript": "^4.3.4"
+    },
+    "author": "Cocos Creator",
+    "editor": ">=3.4.2",
+    "scripts": {
+        "build": "tsc -b",
+        "watch": "tsc -w"
+    },
+
+    "panels": {
+        "common": {
+            "title": "样式列表",
+            "type": "simple",
+            "main": "./dist/panels/index.js",
+            "size": {
+                "width": 800,
+                "height": 600
+            },
+            "flags": {
+                "resizable": true,
+                "alwaysOnTop": true
+            }
+        }
+    },
+
+    "contributions": {
+        "messages": {
+            "updateSkin": {
+                "methods": [
+                    "updateSkin"
+                ]
+            },
+
+            "function-panel_mj": {
+                "methods": [
+                    "openStyleMJ"
+                ]
+            },
+            "function-panel_jd": {
+                "methods": [
+                    "openStyleJD"
+                ]
+            },
+            "function-panel_default": {
+                "methods": [
+                    "openStyleQuery"
+                ]
+            },
+            "function-panel_score": {
+                "methods": [
+                    "openStyleScore"
+                ]
+            },
+            "function-panel_common": {
+                "methods": [
+                    "openFunctionsCommon"
+                ]
+            }
+        },
+
+        "scene": {
+            "script": "./dist/scene.js"
+        },
+
+        "menu": [
+            {
+                "path": "i18n:menu.extension/样式",
+                "label": "界面配置",
+                "message": "function-panel_common"
+            },
+            {
+                "path": "i18n:menu.extension/样式",
+                "label": "麻将",
+                "message": "function-panel_mj"
+            },
+            {
+                "path": "i18n:menu.extension/样式",
+                "label": "金豆",
+                "message": "function-panel_jd"
+            },
+            {
+                "path": "i18n:menu.extension/样式",
+                "label": "积分",
+                "message": "function-panel_score"
+            }
+        ]
+    }
+}
