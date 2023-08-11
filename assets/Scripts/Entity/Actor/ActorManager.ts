@@ -10,7 +10,7 @@ export class ActorManager extends Component {
 
     }
 
-    update(deltaTime: number) {
+    tick(deltaTime: number) {
         if(DataManager.Instance.jm.output.length()) {
             const {x, y} = DataManager.Instance.jm.output;
             DataManager.Instance.applyInput({

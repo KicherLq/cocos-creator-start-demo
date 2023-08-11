@@ -174,7 +174,7 @@
     "_priority": 0,
     "_fov": 45,
     "_fovAxis": 0,
-    "_orthoHeight": 325.17745302713985,
+    "_orthoHeight": 325.678496868476,
     "_near": 0,
     "_far": 1000,
     "_color": {
@@ -262,6 +262,7 @@
     "__type__": "cc.Node",
     "_name": "Map",
     "_objFlags": 0,
+    "__editorExtras__": {},
     "_parent": {
       "__id__": 5
     },
@@ -306,7 +307,7 @@
       "y": 0,
       "z": 0
     },
-    "_id": "8eHvPAeSRNAIkKzT+4vVgH"
+    "_id": "c0E1wks7NHRIei31ua/CzQ"
   },
   {
     "__type__": "cc.UITransform",
@@ -327,7 +328,7 @@
       "x": 0.5,
       "y": 0.5
     },
-    "_id": "c9BODP/ERBjJlLQUkjmypL"
+    "_id": "23HeUox/dFv79JVBesSqUz"
   },
   {
     "__type__": "cc.Sprite",
@@ -365,7 +366,7 @@
     "_isTrimmedMode": false,
     "_useGrayscale": false,
     "_atlas": null,
-    "_id": "a6rzH0kTpAbpbyNnKND0v+"
+    "_id": "d1v4qkCONNQpzs228lWj5H"
   },
   {
     "__type__": "cc.Widget",
@@ -394,12 +395,13 @@
     "_originalHeight": 128,
     "_alignMode": 2,
     "_lockFlags": 0,
-    "_id": "e8e35h2VtHHIaGvlK1zjeJ"
+    "_id": "32JM54XYtEfL8Jhi70Wr8J"
   },
   {
     "__type__": "cc.Node",
-    "_name": "Player",
+    "_name": "Actor",
     "_objFlags": 0,
+    "__editorExtras__": {},
     "_parent": {
       "__id__": 5
     },
@@ -444,7 +446,7 @@
       "y": 0,
       "z": 0
     },
-    "_id": "e5/v9AglpLPZ5sVeycGsIM"
+    "_id": "4dC45UUB5LhYFrc8DIYjp8"
   },
   {
     "__type__": "cc.UITransform",
@@ -465,7 +467,7 @@
       "x": 0.5,
       "y": 0.5
     },
-    "_id": "72taOGAK9AQLfVazICIuna"
+    "_id": "96Nhb7mhFGMIBfJKZhVMKg"
   },
   {
     "__type__": "cc.Sprite",
@@ -503,7 +505,7 @@
     "_isTrimmedMode": true,
     "_useGrayscale": false,
     "_atlas": null,
-    "_id": "79wGuYc2ZC7LQLz/SNwHF+"
+    "_id": "6dJJmhFXpFeZ+ckoxFz8Ql"
   },
   {
     "__type__": "c7aecPe449FoZG/f9Jb6E7F",
@@ -514,7 +516,7 @@
     },
     "_enabled": true,
     "__prefab": null,
-    "_id": "eaM9u61n9MB6HqLdzsw6P8"
+    "_id": "dbWNG0LzhFEoZ01B1eWbNF"
   },
   {
     "__type__": "cc.UITransform",
