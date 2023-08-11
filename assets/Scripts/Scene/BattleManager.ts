@@ -6,9 +6,10 @@ import { ActorManager } from "../Entity/Actor/ActorManager";
 import { ResourceManager } from "../Global/ResourceManager";
 import { Prefab } from "cc";
 import { instantiate } from "cc";
-import { PrefabPathEnum } from "../Enum";
+import { PrefabPathEnum, TexturePathEnum } from "../Enum";
 import { EntityTypeEnum } from "../Common/Enum";
 import { DataItem } from '../../../extensions/ccc-references-finder/@types/packages/scene/@types/cce/public/ipc/utils';
+import { SpriteFrame } from "cc";
 const { ccclass, property } = _decorator;
 
 @ccclass('BattleManager')
@@ -44,10 +45,18 @@ export class BattleManager extends Component {
             });
             list.push(p);
         }
+
+        for (const type in TexturePathEnum) {
+            const p = ResourceManager.Instance.loadDir(TexturePathEnum[type], SpriteFrame).then(spriteframes => {
+                DataManager.Instance.textureMap.set(type, spriteframes);
+            });
+            list.push(p);
+        }
         
         const p = await Promise.all(list);
         console.log(p);
     }
+    
     update(dt: number) {
         if(!this.shouldUpdate) {
             return;

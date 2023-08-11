@@ -23,11 +23,15 @@ export class ActorManager extends Component {
                 deltaTime,
             });
 
-            console.log(DataManager.Instance.state.actors[0].position.x, DataManager.Instance.state.actors[0].position.y);
+            //console.log(DataManager.Instance.state.actors[0].position.x, DataManager.Instance.state.actors[0].position.y);
         }
     }
 
     render(data: IActor) {
-        this.node.setPosition(data.position.x, data.position.y);
+        const {direction, position} = data;
+        this.node.setPosition(position.x, position.y);
+        if(direction.x !== 0) {
+            this.node.setScale(direction.x > 0 ? 1 : -1, 1);
+        }
     }
 }
