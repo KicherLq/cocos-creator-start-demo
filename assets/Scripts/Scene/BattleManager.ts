@@ -8,7 +8,6 @@ import { Prefab } from "cc";
 import { instantiate } from "cc";
 import { PrefabPathEnum, TexturePathEnum } from "../Enum";
 import { EntityTypeEnum } from "../Common/Enum";
-import { DataItem } from '../../../extensions/ccc-references-finder/@types/packages/scene/@types/cce/public/ipc/utils';
 import { SpriteFrame } from "cc";
 const { ccclass, property } = _decorator;
 
@@ -23,6 +22,7 @@ export class BattleManager extends Component {
         this._ui    = this.node.getChildByName('UI');
         this._stage.destroyAllChildren();
         DataManager.Instance.jm = this._ui.getComponentInChildren(JoyStickManager);
+        DataManager.Instance.stage = this.node.getChildByName('Stage');
     }
     
     async start() {
@@ -54,7 +54,6 @@ export class BattleManager extends Component {
         }
         
         const p = await Promise.all(list);
-        console.log(p);
     }
     
     update(dt: number) {
@@ -78,9 +77,27 @@ export class BattleManager extends Component {
 
     render() {
         this.renderActor();
+        this.renderBullet();
     }
 
     renderActor() {
+        for(const data of DataManager.Instance.state.actors) {
+            const {id, type} = data;
+            let am: ActorManager = DataManager.Instance.actorMap.get(id);
+            if(!am) {
+                const prefab = DataManager.Instance.prefabMap.get(type);
+                const actor  = instantiate(prefab);
+                actor.setParent(this._stage);
+                let am: ActorManager = actor.addComponent(ActorManager);
+                DataManager.Instance.actorMap.set(data.id, am);
+                am.init(data);
+            } else {
+                am.render(data);
+            }
+        }
+    }
+
+    renderBullet() {
         for(const data of DataManager.Instance.state.actors) {
             const {id, type} = data;
             let am: ActorManager = DataManager.Instance.actorMap.get(id);

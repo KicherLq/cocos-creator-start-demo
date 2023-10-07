@@ -1,10 +1,11 @@
 import { Prefab } from "cc";
 import Singleton from "../Base/Singleton";
-import { IActorMove, IState } from "../Common/State";
+import { IActorMove, IBullet, IClientInput, IState } from "../Common/State";
 import { ActorManager } from "../Entity/Actor/ActorManager";
 import { JoyStickManager } from "../UI/JoyStickManager";
-import { EntityTypeEnum } from "../Common/Enum";
+import { EntityTypeEnum, InputTypeEnum } from "../Common/Enum";
 import { SpriteFrame } from "cc";
+import { Node } from "cc";
 
 const ACTOR_SPEED = 100;
 
@@ -14,6 +15,7 @@ export default class DataManager extends Singleton {
 	}
 
     jm: JoyStickManager;
+    stage: Node;
     actorMap: Map<number, ActorManager> = new Map();
     prefabMap: Map<string, Prefab> = new Map();
     textureMap: Map<string, SpriteFrame[]> = new Map();
@@ -23,6 +25,8 @@ export default class DataManager extends Singleton {
             { 
                 id: 1, 
                 type: EntityTypeEnum.Actor1,
+                weaponType: EntityTypeEnum.Weapon1,
+                bulletType: EntityTypeEnum.Bullet1,
                 position: {
                     x: 0, 
                     y: 0
@@ -33,14 +37,36 @@ export default class DataManager extends Singleton {
                 },
             },
         ],
+        bullets: [
+
+        ],
+        nextBulletId: 1,
     }
 
-    applyInput(input: IActorMove) {
-        const {deltaTime, direction, type, id} = input;
-        const actor = this.state.actors.find(e => e.id === id);
-        actor.direction = direction;
-        
-        actor.position.x += direction.x * deltaTime * ACTOR_SPEED;
-        actor.position.y += direction.y * deltaTime * ACTOR_SPEED;
+    applyInput(input: IClientInput) {
+        switch (input.type) {
+            case InputTypeEnum.ActorMove: {
+                const { deltaTime, direction, type, id } = input;
+                const actor = this.state.actors.find(e => e.id === id);
+                actor.direction = direction;
+
+                actor.position.x += direction.x * deltaTime * ACTOR_SPEED;
+                actor.position.y += direction.y * deltaTime * ACTOR_SPEED;
+                break;
+            }
+            case InputTypeEnum.Shot: {
+                const { owner, direction, position } = input;
+                const bullet: IBullet = {
+                    id: this.state.nextBulletId++,
+                    owner, 
+                    direction,
+                    position,
+                    type: this.actorMap.get(owner).bulletType,
+                }
+                this.state.bullets.push(bullet);
+                break;
+            }
+        }
+
     }
 }

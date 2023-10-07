@@ -8,7 +8,7 @@
             "type": "msedge",
             "request": "launch",
             "name": "针对 localhost 启动 Edge",
-            "url": "http://localhost:7458",
+            "url": "http://localhost:7456",
             "webRoot": "${workspaceFolder}"
         }
     ]

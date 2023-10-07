@@ -32,7 +32,7 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 40,
+      "x": 0,
       "y": 0,
       "z": 0
     },
@@ -85,7 +85,7 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 0,
+      "x": 40,
       "y": 0,
       "z": 0
     },
@@ -408,6 +408,7 @@
       "__id__": 0
     },
     "fileId": "cdpAKs71lIUpteH2x9nDyg",
+    "instance": null,
     "targetOverrides": null
   }
 ]

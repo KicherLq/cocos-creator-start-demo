@@ -4,6 +4,8 @@ import { Vec2 } from 'cc';
 import { EventTouch } from 'cc';
 import { input } from 'cc';
 import { _decorator, Component, Node } from 'cc';
+import EventManager from '../Global/EventManager';
+import { EventEnum } from '../Enum';
 const { ccclass, property } = _decorator;
 
 @ccclass('JoyStickManager')
