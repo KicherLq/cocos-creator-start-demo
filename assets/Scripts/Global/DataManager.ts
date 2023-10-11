@@ -1,4 +1,4 @@
-import { Prefab } from "cc";
+import { Prefab, instantiate } from 'cc';
 import Singleton from "../Base/Singleton";
 import { IActorMove, IBullet, IClientInput, IState } from "../Common/State";
 import { ActorManager } from "../Entity/Actor/ActorManager";
@@ -7,6 +7,8 @@ import { EntityTypeEnum, InputTypeEnum } from "../Common/Enum";
 import { SpriteFrame } from "cc";
 import { Node } from "cc";
 import { BulletManager } from '../Entity/Bullet/BulletManager';
+import EventManager from "./EventManager";
+import { EventEnum } from "../Enum";
 
 const ACTOR_SPEED = 100;
 const BULLET_SPEED = 600;
@@ -68,6 +70,8 @@ export default class DataManager extends Singleton {
                     position,
                     type: this.actorMap.get(owner).bulletType,
                 }
+
+                EventManager.Instance.emit(EventEnum.bulletBorn, owner);
                 this.state.bullets.push(bullet);
                 break;
             }
@@ -79,10 +83,11 @@ export default class DataManager extends Singleton {
                 for(let i = bullets.length - 1; i >= 0; --i) {
                     const bullet = bullets[i];
                     if(Math.abs(bullet.position.x) > MAP_WIDTH / 2 || Math.abs(bullet.position.y) > MAP_HEIGHT / 2) {
+                        EventManager.Instance.emit(EventEnum.explosionBorn, bullet.id, {x: bullet.position.x, y: bullet.position.y});
                         bullets.splice(i, 1);
                     }
                 }
-                
+
                 for (const bullet of bullets) {
                     bullet.position.x += bullet.direction.x * dt * BULLET_SPEED;
                     bullet.position.y += bullet.direction.y * dt * BULLET_SPEED;

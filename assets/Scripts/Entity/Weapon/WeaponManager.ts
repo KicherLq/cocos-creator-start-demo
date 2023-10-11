@@ -29,11 +29,21 @@ export class WeaponManager extends EntityManager {
         this.fsm.init(data.weaponType);
 
         this.state = EntityStateEnum.Idle;
+        EventManager.Instance.on(EventEnum.bulletBorn, this.handleBulletBorn, this);
         EventManager.Instance.on(EventEnum.shot, this.handleWeaponShot, this);
     }
 
     protected onDestroy(): void {
+        EventManager.Instance.on(EventEnum.bulletBorn, this.handleBulletBorn, this);
         EventManager.Instance.off(EventEnum.shot, this.handleWeaponShot, this);
+    }
+
+    handleBulletBorn(owner: number) {
+        if(owner !== this.__owner) {
+            return;
+        }
+
+        this.state = EntityStateEnum.Attack;
     }
 
     handleWeaponShot() {
