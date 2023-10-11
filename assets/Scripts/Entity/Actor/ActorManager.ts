@@ -8,6 +8,7 @@ import { EntityStateEnum } from '../../Enum';
 import { instantiate } from 'cc';
 import { WeaponManager } from '../Weapon/WeaponManager';
 import { rad2Angle } from '../../Utils';
+import { ProgressBar } from 'cc';
 const { ccclass, property } = _decorator;
 
 @ccclass('ActorManager')
@@ -15,9 +16,11 @@ export class ActorManager extends EntityManager {
     public bulletType: EntityTypeEnum;
     private __wm: WeaponManager = null;
     private __id: number = 1;
+    private __hp: ProgressBar = null;
 
     init(data: IActor) {
         this.bulletType = data.bulletType;
+        this.__hp = this.node.getComponentInChildren(ProgressBar);
         this.__id = data.id;
         this.fsm = this.addComponent(ActorStateMachine);
         this.fsm.init(data.type);
@@ -57,11 +60,14 @@ export class ActorManager extends EntityManager {
         this.node.setPosition(position.x, position.y);
         if(direction.x !== 0) {
             this.node.setScale(direction.x > 0 ? 1 : -1, 1);
+            this.__hp.node.setScale(direction.x > 0 ? 1 : -1, 1);
         }
 
         const side = Math.sqrt(direction.x ** 2 + direction.y ** 2);
         const rad = Math.asin(direction.y / side);
         const angle = rad2Angle(rad);
         this.__wm.node.angle = angle;
+
+        this.__hp.progress = data.hp / this.__hp.totalLength;
     }
 }
