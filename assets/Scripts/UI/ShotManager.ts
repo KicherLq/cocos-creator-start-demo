@@ -10,7 +10,8 @@ export class ShotManager extends Component {
     shotInterval: number = 0.5;
 
     protected onLoad(): void {
-        this.schedule(this.shot, this.shotInterval);
+        // this.schedule(this.shot, this.shotInterval);
+        // this.schedule(this.shot, this.shotInterval, 10);
     }
 
     shot() {

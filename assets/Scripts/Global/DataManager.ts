@@ -6,6 +6,7 @@ import { JoyStickManager } from "../UI/JoyStickManager";
 import { EntityTypeEnum, InputTypeEnum } from "../Common/Enum";
 import { SpriteFrame } from "cc";
 import { Node } from "cc";
+import { BulletManager } from '../Entity/Bullet/BulletManager';
 
 const ACTOR_SPEED = 100;
 
@@ -17,6 +18,7 @@ export default class DataManager extends Singleton {
     jm: JoyStickManager;
     stage: Node;
     actorMap: Map<number, ActorManager> = new Map();
+    bulletMap: Map<number, BulletManager> = new Map();
     prefabMap: Map<string, Prefab> = new Map();
     textureMap: Map<string, SpriteFrame[]> = new Map();
 
@@ -26,7 +28,7 @@ export default class DataManager extends Singleton {
                 id: 1, 
                 type: EntityTypeEnum.Actor1,
                 weaponType: EntityTypeEnum.Weapon1,
-                bulletType: EntityTypeEnum.Bullet1,
+                bulletType: EntityTypeEnum.Bullet2,
                 position: {
                     x: 0, 
                     y: 0

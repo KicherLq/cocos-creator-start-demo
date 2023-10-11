@@ -5,8 +5,8 @@ import { EntityTypeEnum } from "../../Common/Enum";
 import { EntityStateEnum, ParamsNameEnum } from "../../Enum";
 const { ccclass } = _decorator;
 
-@ccclass("WeaponStateMachine")
-export class WeaponStateMachine extends StateMachine {
+@ccclass("BulletStateMachine")
+export class BulletStateMachine extends StateMachine {
     init(type: EntityTypeEnum) {
         this.type = type;
         this.animationComponent = this.node.addComponent(Animation);
