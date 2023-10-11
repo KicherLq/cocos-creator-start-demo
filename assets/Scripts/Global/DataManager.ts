@@ -20,6 +20,7 @@ export default class DataManager extends Singleton {
 		return super.GetInstance<DataManager>();
 	}
 
+    myPlayerId: number = 1;
     jm: JoyStickManager;
     stage: Node;
     actorMap: Map<number, ActorManager> = new Map();
@@ -35,11 +36,25 @@ export default class DataManager extends Singleton {
                 weaponType: EntityTypeEnum.Weapon1,
                 bulletType: EntityTypeEnum.Bullet2,
                 position: {
-                    x: 0, 
-                    y: 0
+                    x: -150, 
+                    y: -150
                 }, 
                 direction: {
                     x: 1, 
+                    y: 0
+                },
+            },
+            { 
+                id: 2, 
+                type: EntityTypeEnum.Actor1,
+                weaponType: EntityTypeEnum.Weapon1,
+                bulletType: EntityTypeEnum.Bullet2,
+                position: {
+                    x: 150, 
+                    y: 150
+                }, 
+                direction: {
+                    x: -1, 
                     y: 0
                 },
             },

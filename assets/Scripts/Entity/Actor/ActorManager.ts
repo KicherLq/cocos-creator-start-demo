@@ -14,9 +14,11 @@ const { ccclass, property } = _decorator;
 export class ActorManager extends EntityManager {
     public bulletType: EntityTypeEnum;
     private __wm: WeaponManager = null;
+    private __id: number = 1;
 
     init(data: IActor) {
         this.bulletType = data.bulletType;
+        this.__id = data.id;
         this.fsm = this.addComponent(ActorStateMachine);
         this.fsm.init(data.type);
 
@@ -29,6 +31,9 @@ export class ActorManager extends EntityManager {
     }
 
     tick(deltaTime: number) {
+        if(DataManager.Instance.myPlayerId !== this.__id) {
+            return;
+        }
         if(DataManager.Instance.jm.output.length()) {
             const {x, y} = DataManager.Instance.jm.output;
             DataManager.Instance.applyInput({
