@@ -28,7 +28,7 @@ export interface IState {
     nextBulletId: number,
 }
 
-export type IClientInput = IActorMove | IShot;
+export type IClientInput = IActorMove | IShot | ITimePast;
 
 export interface IActorMove {
     id: number,
@@ -42,4 +42,9 @@ export interface IShot {
     owner: number,
     position: IVec2,
     direction: IVec2,
+}
+
+export interface ITimePast {
+    type: InputTypeEnum.TimePast,
+    dt: number,
 }

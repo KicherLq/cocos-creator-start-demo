@@ -7,7 +7,7 @@ import { ResourceManager } from "../Global/ResourceManager";
 import { Prefab } from "cc";
 import { instantiate } from "cc";
 import { PrefabPathEnum, TexturePathEnum } from "../Enum";
-import { EntityTypeEnum } from "../Common/Enum";
+import { EntityTypeEnum, InputTypeEnum } from "../Common/Enum";
 import { SpriteFrame } from "cc";
 import { BulletManager } from "../Entity/Bullet/BulletManager";
 const { ccclass, property } = _decorator;
@@ -67,6 +67,11 @@ export class BattleManager extends Component {
 
     tick(dt: number) {
         this.tickActor(dt);
+
+        DataManager.Instance.applyInput({
+            type: InputTypeEnum.TimePast,
+            dt
+        });
     }
     tickActor(dt: number) {
         for (const data of DataManager.Instance.state.actors) {

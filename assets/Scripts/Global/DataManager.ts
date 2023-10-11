@@ -9,6 +9,7 @@ import { Node } from "cc";
 import { BulletManager } from '../Entity/Bullet/BulletManager';
 
 const ACTOR_SPEED = 100;
+const BULLET_SPEED = 600;
 
 export default class DataManager extends Singleton {
 	static get Instance() {
@@ -66,6 +67,15 @@ export default class DataManager extends Singleton {
                     type: this.actorMap.get(owner).bulletType,
                 }
                 this.state.bullets.push(bullet);
+                break;
+            }
+            case InputTypeEnum.TimePast: {
+                const {dt} = input;
+                const {bullets} = this.state;
+                for (const bullet of bullets) {
+                    bullet.position.x += bullet.direction.x * dt * BULLET_SPEED;
+                    bullet.position.y += bullet.direction.y * dt * BULLET_SPEED;
+                }
                 break;
             }
         }
