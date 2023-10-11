@@ -34,7 +34,7 @@ export class WeaponManager extends EntityManager {
     }
 
     protected onDestroy(): void {
-        EventManager.Instance.on(EventEnum.bulletBorn, this.handleBulletBorn, this);
+        EventManager.Instance.off(EventEnum.bulletBorn, this.handleBulletBorn, this);
         EventManager.Instance.off(EventEnum.shot, this.handleWeaponShot, this);
     }
 
@@ -50,6 +50,7 @@ export class WeaponManager extends EntityManager {
         if(this.__owner !== DataManager.Instance.myPlayerId) {
             return;
         }
+        
         const pointWorldPos = this.__point.getWorldPosition();
         const pointStagePos = DataManager.Instance.stage.getComponent(UITransform).convertToNodeSpaceAR(pointWorldPos);
         const anchorWorldPos = this.__anchor.getWorldPosition();
