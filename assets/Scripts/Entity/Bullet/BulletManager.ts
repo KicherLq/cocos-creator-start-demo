@@ -9,6 +9,7 @@ import { rad2Angle } from '../../Utils';
 import EventManager from '../../Global/EventManager';
 import { instantiate } from 'cc';
 import { ExplosionManager } from '../Explosion/ExplosionManager';
+import { ObjectPoolManager } from '../../Global/ObjectPoolManager';
 const { ccclass, property } = _decorator;
 
 @ccclass('BulletManager')
@@ -34,16 +35,14 @@ export class BulletManager extends EntityManager {
         }
 
         //处理子弹爆炸特效相关逻辑
-        const prefab = DataManager.Instance.prefabMap.get(EntityTypeEnum.Explosion);
-        const explosion = instantiate(prefab);
-        explosion.setParent(DataManager.Instance.stage);
-        const em = explosion.addComponent(ExplosionManager);
+        const explosion = ObjectPoolManager.Instance.get(EntityTypeEnum.Explosion);
+        const em = explosion.getComponent(ExplosionManager) || explosion.addComponent(ExplosionManager);
         em.init(EntityTypeEnum.Explosion, {x, y});
 
         //处理子弹销毁的相关逻辑
         EventManager.Instance.off(EventEnum.explosionBorn, this.handleExplosionBorn, this);
         DataManager.Instance.bulletMap.delete(this.__id);
-        this.node.destroy();
+        ObjectPoolManager.Instance.ret(this.node);
     }
 
     render(data: IBullet) {
