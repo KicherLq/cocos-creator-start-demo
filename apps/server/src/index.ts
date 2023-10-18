@@ -12,7 +12,12 @@ wss.on('connection', (socket: WebSocket) => {
         console.log(data.toString());
     });
 
-    socket.send('hello, here is server.');
+    const obj = {
+        name: 'kicher',
+        data: 'this is kicher.',
+    }
+    // socket.send('hello, here is server.');
+    socket.send(JSON.stringify(obj));
 });
 
 wss.on('listening', () => {

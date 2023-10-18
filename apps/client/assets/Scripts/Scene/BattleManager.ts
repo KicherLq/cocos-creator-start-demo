@@ -34,6 +34,13 @@ export class BattleManager extends Component {
         // this.shouldUpdate = true;
         await this.connectServer();
         NetWorkManager.Instance.sendMessage('hello, here is client.');
+        NetWorkManager.Instance.listenMessage(
+            'kicher',
+            (data) => { 
+                console.log('listenMessage', data); 
+            },
+            this
+        );
     }
 
     async connectServer() {
