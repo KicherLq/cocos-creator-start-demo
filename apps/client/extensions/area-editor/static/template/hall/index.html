@@ -1,0 +1,269 @@
+<div id="generate-panel" class="panel">
+    <div id="setting-panel" class="settings">
+        <div class="wrap">
+            <ui-tab id='ConfigChoose' value="0">
+                <ui-button value="0">配置1</ui-button>
+            </ui-tab>
+
+            <ui-section expand="" header="显示条件" class="config section">
+                <ui-prop class="mb-10">
+                    <ui-label tooltip="选择目标平台" slot="label" value="平台条件"></ui-label>
+                    <ui-checkbox id="limit_platform_tcy">平台包</ui-checkbox>
+                    <ui-checkbox id="limit_platform_platformset">渠道合集包</ui-checkbox>
+                    <ui-checkbox id="limit_platform_platformsettcy">官方合集包</ui-checkbox>
+                    <ui-checkbox id="limit_platform_minigame">小程序</ui-checkbox>
+                    <ui-checkbox id="limit_platform_minigameios">小程序ios</ui-checkbox>
+                </ui-prop>
+
+                <ui-prop class="mb-10">
+                    <ui-label slot="label" value="对局数条件"></ui-label>
+                    <ui-input id= "limit_bout" value=""></ui-input>
+                </ui-prop>
+
+                <ui-prop class="mb-10">
+                    <ui-label slot="label" value="注册天数条件"></ui-label>
+                    <ui-input id= "limit_createdays" value=""></ui-input>
+                </ui-prop>
+            </ui-section>
+            
+            <ui-section expand="" header="设置" class="config section">
+                <div class="row">
+                    <ui-prop class="mb-10">
+                        <ui-label tooltip="配置名称必须唯一" slot="label" value="配置名称"></ui-label>
+                        <ui-input id= "inputName" value=""></ui-input>
+                    </ui-prop>
+
+                    <ui-prop class="mb-10">
+                        <ui-label tooltip="选择入口的布局样式" slot="label" value="布局选择"></ui-label>
+
+                        <ui-select id="show-style" v-bind:value=chooseStyle slot="content" style="margin-right: 2px">
+                        </ui-select>
+                    </ui-prop>
+
+                    
+
+                    <ui-prop class="mb-10">
+                        <ui-checkbox id="checkMoregame">右侧娱乐大厅显示</ui-checkbox>
+                    </ui-prop>
+
+                    <ui-prop class="mb-10">
+                        <ui-checkbox id="checkQuickStart" value = true>快速开始</ui-checkbox>
+                    </ui-prop>
+
+                    <ui-prop class="mb-10">
+                        <ui-checkbox id= "checkShowRule" value = false>玩法规则</ui-checkbox>
+                    </ui-prop>
+
+                    <ui-prop class="mb-10">
+                        <ui-checkbox id= "checkBackToFirstLayer" value = false>返回一级大厅</ui-checkbox>
+                    </ui-prop>
+
+                    <div>
+                        <ui-prop class="mb-10">
+                            <ui-checkbox id= "checkShowRole" value = true>角色显示</ui-checkbox>
+                        </ui-prop>
+
+                        <div id="divRolePrefab">
+                            <ui-prop class="mb-10">
+                                <ui-label slot="label" value="男："></ui-label>
+                                <ui-asset tooltip="自定义角色" id="rolePrefabAsset1" droppable="cc.Prefab"></ui-asset>
+                            </ui-prop>
+    
+                            <ui-prop class="mb-10">
+                                <ui-label slot="label" value="女："></ui-label>
+                                <ui-asset tooltip="自定义角色" id="rolePrefabAsset2" droppable="cc.Prefab"></ui-asset>
+                            </ui-prop>
+                        </div>
+
+                        <div id="divAreaLayout">
+                            <ui-prop class="mb-10">
+                                <ui-checkbox id= "checkAreaCenter" value = false>大区居中显示</ui-checkbox>
+                            </ui-prop>
+    
+                            <ui-prop class="mb-10">
+                                <ui-label slot="label">大区间距</ui-label>
+                                <ui-num-input value="100" step="1" id="inputAreaSpace"></ui-num-input>
+                            </ui-prop>
+                        </div>
+                    </div>
+
+                    <div>
+                        <ui-prop class="mb-10">
+                            <ui-checkbox id= "checkMusic" value = true>背景音乐</ui-checkbox>
+                        </ui-prop>
+
+                        <ui-prop class="mb-10">
+                            <ui-asset tooltip="自定义背景音乐" id="musicAsset" droppable="cc.AudioClip"></ui-asset>
+                        </ui-prop>
+                    </div>
+
+                    <div>
+                        <ui-prop class="mb-10">
+                            <ui-label slot="label" value="背景资源"></ui-label>
+                        </ui-prop>
+                        <ui-prop class="mb-10">
+                            <ui-asset tooltip="自定义背景资源" id="backgroundAsset" droppable="cc.Prefab"></ui-asset>
+                        </ui-prop>
+
+                        <ui-prop class="mb-10">
+                            <ui-label slot="label" value="背景底条"></ui-label>
+                        </ui-prop>
+                        <ui-prop class="mb-10">
+                            <ui-asset tooltip="自定义背景底条" id="backgroundBottomImage" droppable="cc.ImageAsset"></ui-asset>
+                        </ui-prop>
+                    </div>
+
+                    <ui-prop class="mb-10">
+                        <ui-label slot="label">SkewX</ui-label>
+                        <ui-num-input value="0" step="1" id="inputSkewX"></ui-num-input>
+                    </ui-prop>
+                </div>
+            </ui-section>
+
+            <ui-section id=prop expand="" header="节点属性" class="config section">
+                <div id="areaProp" class="row">
+                    <ui-tooltip>id为服务器大区配置中的Type字段</ui-tooltip>
+                    <ui-prop class="mb-10">
+                        <ui-label slot="label" value="AreaTypeId"></ui-label>
+                        <ui-num-input id="areaPropAreaTypeId" slot="content" step="1">0</ui-num-input>
+                    </ui-prop>
+
+                    <ui-prop class="mb-10">
+                        <ui-checkbox id="areaPropDefaultArea">默认大区</ui-checkbox>
+                        <ui-checkbox id="areaPropScoreArea">玩积分</ui-checkbox>
+                    </ui-prop>
+                </div>
+
+                <div id="roomProp" class="row">
+                    <ui-prop class="mb-10">
+                        <ui-label slot="label" value="所属大区AreaTypeId"></ui-label>
+                        <ui-num-input id="roomPropAreaTypeId" slot="content" step="1">0</ui-num-input>
+                    </ui-prop>
+
+                    <ui-tooltip>id为服务器房间配置中的Type字段</ui-tooltip>
+                    <ui-prop class="mb-10">
+                        <ui-label slot="label" value="RoomTypeId"></ui-label>
+                        <ui-num-input id="roomPropRoomTypeId" slot="content" step="1">0</ui-num-input>
+                    </ui-prop>
+                </div>
+
+                <div id="customProp" class="row" hidden>
+                    <ui-prop class="mb-10">
+                        <ui-label slot="label" value="跳转ID"></ui-label>
+                        <ui-num-input id="customPropJumpId" slot="content" step="1">0</ui-num-input>
+                    </ui-prop>
+                </div>
+
+                <div id="moregameProp" class="row" hidden>
+                    <ui-prop class="mb-10">
+                        <ui-label slot="label" value="联运游戏"></ui-label>
+                        <ui-input id= "moregamePropUrl" value=""></ui-input>
+                    </ui-prop>
+
+                    <ui-prop class="mb-10">
+                        <ui-label slot="label" value="轮播图片尺寸"></ui-label>
+                        <ui-select id="moregamePropSlotSize" slot="content" value="0">
+                            <option value="0">默认</option>
+                            <option value="1">中_m</option>
+                            <option value="2">小_s</option>
+                        </ui-select>
+                    </ui-prop>
+                </div>
+
+                <div id="gameProp" class="row" hidden>
+                    <ui-prop class="mb-10">
+                        <ui-label slot="label" value="abbr"></ui-label>
+                        <ui-input id="gamePropAbbr" value=""></ui-input>
+                    </ui-prop>
+                </div>
+
+                <div id="shareProp" class="row">
+                    <div>
+                        <ui-prop class="mb-10">
+                            <ui-label slot="label">背景样式</ui-label>
+                            <ui-select id="propAssetType" slot="content" value="image"">
+                                <option value="image">图片</option>
+                                <option value="prefab">预制体</option>
+                                <option value="remoteimage">远程图片</option>
+                            </ui-select>
+                        </ui-prop>
+    
+                        <ui-prop class="mb-10">
+                            <ui-asset id="propImageAsset" droppable="cc.ImageAsset"></ui-asset>
+                            <ui-asset id="propPrefabAsset" droppable="cc.Prefab"></ui-asset>
+                            <div id="propRemoteImageAsset">
+                                <ui-prop class="mb-10">
+                                    <ui-label slot="label" value="url">地址</ui-label>
+                                    <ui-input id="propImageUrl" value=""></ui-input>
+                                    <ui-image id="propRemoteImage"></ui-image>
+                                </ui-prop>
+                            </div>
+                        </ui-prop>
+                    </div>
+                
+                    <ui-prop class="mb-10">
+                        <ui-label slot="label" value="埋点"></ui-label>
+                        <ui-input id= "propDatalink" value=""></ui-input>
+                    </ui-prop>
+                </div>
+            </ui-section>
+
+            <ui-section expand="" header="入口选择" class="config section">
+                <div class="row">
+                    <ui-prop class="area">
+                        <ui-drag-item id="dragArea" type="type-a" value="area">大区</ui-drag-item>
+                    </ui-prop>
+
+                    <ui-prop class="room">
+                        <ui-drag-item id="dragRoom" type="type-a"  value="room">房间</ui-drag-item>
+                    </ui-prop>
+
+                    <ui-prop class="custom">
+                        <ui-drag-item id="dragCustom" type="type-a" value="custom">自定义</ui-drag-item>
+                    </ui-prop>
+
+                    <ui-prop class="moregame">
+                        <ui-drag-item id="dragMoregame" type="type-a" value="moregame">联运游戏</ui-drag-item>
+                    </ui-prop>
+
+                    <ui-prop class="game">
+                        <ui-drag-item id="dragGame" type="type-a" value="game">游戏</ui-drag-item>
+                    </ui-prop>
+                </div>
+            </ui-section>
+
+            <div class="row">
+                <ui-prop class="mb-10">
+                    <ui-button id="save-btn" style="width: 100%;" >保存</ui-button>
+                </ui-prop>
+
+                <ui-prop class="mb-10">
+                    <ui-button id="new-btn" style="width: 100%;">新建</ui-button>
+                </ui-prop>
+
+                <ui-prop class="mb-10">
+                    <ui-button id="newfrom-btn" style="width: 100%;">从当前配置新建</ui-button>
+                </ui-prop>
+
+                <ui-prop class="mb-10">
+                    <ui-button id="del-btn" style="width: 100%;" >删除</ui-button>
+                </ui-prop>
+            </div>
+            
+        </div>
+    </div>
+    
+    <div id="content-panel" class="content">
+        <div class = "layout" style="margin: 0 auto; ">
+            <li id= "col1" class = "layout_col">
+            </li>
+
+            <li id= "col2" class = "layout_col">
+            </li>
+
+            <li id= "col3" class = "layout_col">
+
+            </li>
+        </div>
+    </div>
+</div>

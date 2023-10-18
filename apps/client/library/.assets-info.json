@@ -1,0 +1,962 @@
+{
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources": {
+    "time": 1691656632894.2988,
+    "uuid": "361398e8-25a2-4476-a5dd-833ff68e087b",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts": {
+    "time": 1697601384280.0295,
+    "uuid": "a5ff1131-2769-49ad-92d3-4d7f4b7c2b24",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture": {
+    "time": 1691551804267.6953,
+    "uuid": "d7f1d6a2-3440-4dbb-aab0-6217739e019d",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Base": {
+    "time": 1691551804210.6956,
+    "uuid": "b9842cc1-d805-42af-b6b9-b15d5dd32f65",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Enum": {
+    "time": 1691551804212.698,
+    "uuid": "5b95c11b-0954-45ac-99ba-98df4825c906",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Global": {
+    "time": 1697530515071.7646,
+    "uuid": "6262be8a-effd-4208-89cd-6532b055b4a0",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Utils": {
+    "time": 1691551804218.6953,
+    "uuid": "f395bd07-24d1-424e-bf3c-3276de3d9d22",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor": {
+    "time": 1691551804234.6958,
+    "uuid": "4314662e-d411-4396-bd0a-ce13820a5745",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\bg": {
+    "time": 1691551804254.6958,
+    "uuid": "36488b93-05fd-4191-af7b-297d24da5847",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\bullet": {
+    "time": 1691551804257.6953,
+    "uuid": "a0a010bb-d1c0-4efa-a55f-ee60438f492e",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\explosion": {
+    "time": 1691551804265.6958,
+    "uuid": "fe6330d8-92bb-4d96-a162-30010e542247",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\joystick": {
+    "time": 1691551804266.6956,
+    "uuid": "b2041c87-dac4-445e-a3ac-e6689804c3b4",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\weapon": {
+    "time": 1691551804276.696,
+    "uuid": "c3b32cc3-fa22-4efd-a481-c5876d5cced3",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor1": {
+    "time": 1691551804229.6953,
+    "uuid": "458c6587-cf17-4ea1-8816-5319ffa4bec0",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor2": {
+    "time": 1691551804241.6965,
+    "uuid": "d539fe31-35be-459b-af9e-b1c5ce8049dd",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\bullet\\bullet1": {
+    "time": 1691551804256.6956,
+    "uuid": "fd66628c-bd95-4709-ab7d-a050731228e4",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\bullet\\bullet2": {
+    "time": 1691551804258.6958,
+    "uuid": "7bc2b36a-1f9e-4c27-b679-7f78f1b9d8ed",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\weapon\\weapon1": {
+    "time": 1691551804274.6953,
+    "uuid": "fb8659d0-2770-4f82-bfb4-2bd2c183f241",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\weapon\\weapon2": {
+    "time": 1691551804285.3208,
+    "uuid": "7249fc9e-d7c5-4ecf-b450-99ae0a17c417",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor1\\idle": {
+    "time": 1691551804228.6953,
+    "uuid": "771d5be3-e4c5-43c9-9025-da4338f0bd9c",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor1\\run": {
+    "time": 1691551804234.6958,
+    "uuid": "977efd2e-276e-4c70-81c1-e539532a595b",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor2\\idle": {
+    "time": 1691551804240.6953,
+    "uuid": "a2fc4f9e-f98d-42df-b47c-42c5d6c60eb4",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor2\\run": {
+    "time": 1691551804252.6953,
+    "uuid": "c957e484-e081-4832-a24d-6541bd2f40d4",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\weapon\\weapon1\\attack": {
+    "time": 1691551804273.6953,
+    "uuid": "0ed73ab4-b2c1-4624-a5b8-c5f31394d8fa",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\weapon\\weapon1\\idle": {
+    "time": 1691551804275.6992,
+    "uuid": "7b876fea-1bd1-41a0-93a8-bd20d64d7bc3",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\weapon\\weapon2\\attack": {
+    "time": 1691551804284.3208,
+    "uuid": "b82f00e2-ef64-4845-9455-b855caa49483",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\weapon\\weapon2\\idle": {
+    "time": 1691551804286.3215,
+    "uuid": "6248c4f2-da4b-42af-99f1-a929b1c32404",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Base\\EntityManager.ts": {
+    "time": 1670506655000,
+    "uuid": "2e4eed53-d1b9-42ef-97aa-8d0a8da927f7",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Base\\Singleton.ts": {
+    "time": 1691637180383.8164,
+    "uuid": "0ee5b84a-8971-410f-a39d-2cf96597dd45",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Base\\State.ts": {
+    "time": 1691747398817.0908,
+    "uuid": "226c1921-1459-4764-82e6-b1a11c5a73c2",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Base\\StateMachine.ts": {
+    "time": 1691747196294.5742,
+    "uuid": "66538d45-0fcf-4ed2-8e47-a0a688ddaf3c",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Base\\StateMachineTemplate.ts": {
+    "time": 1670506655000,
+    "uuid": "ff33a799-6908-4d1d-902b-f36aec10d4de",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Base\\SubStateMachine.ts": {
+    "time": 1691746050664.894,
+    "uuid": "7f9fac71-9820-41b2-8b4d-2dc4185414ef",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Enum\\index.ts": {
+    "time": 1697009782255.589,
+    "uuid": "393286c2-7b09-44d1-955f-049e7e5b36ea",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Global\\DataManager.ts": {
+    "time": 1697015358920.9937,
+    "uuid": "1682ed16-4e4f-46b3-8aca-92baecd30b9d",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Global\\EventManager.ts": {
+    "time": 1694680073686.4644,
+    "uuid": "2aa2e7de-b014-4ee7-a537-4bc99dbf9164",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Global\\ResourceManager.ts": {
+    "time": 1694680348149.598,
+    "uuid": "6278727d-3641-46d1-ae43-52b7829402d1",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Utils\\index.ts": {
+    "time": 1696663728391.3523,
+    "uuid": "2e280f2e-52a3-465a-acf5-fb412ef51d6b",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources.meta": {
+    "time": 1670506655000
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts.meta": {
+    "time": 1670506655000
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture.meta": {
+    "time": 1670506655000
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Base.meta": {
+    "time": 1670506655000
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Enum.meta": {
+    "time": 1670506655000
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Global.meta": {
+    "time": 1670506655000
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Utils.meta": {
+    "time": 1670506655000
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor.meta": {
+    "time": 1670506655000
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\bg.meta": {
+    "time": 1670506655000
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\bullet.meta": {
+    "time": 1670506655000
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\explosion.meta": {
+    "time": 1670506655000
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\joystick.meta": {
+    "time": 1670506655000
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\weapon.meta": {
+    "time": 1670506655000
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor1.meta": {
+    "time": 1670506655000
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor2.meta": {
+    "time": 1670506655000
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\bullet\\bullet1.meta": {
+    "time": 1670506655000
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\bullet\\bullet2.meta": {
+    "time": 1670506655000
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\weapon\\weapon1.meta": {
+    "time": 1670506655000
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\weapon\\weapon2.meta": {
+    "time": 1670506655000
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor1\\idle.meta": {
+    "time": 1670506655000
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor1\\run.meta": {
+    "time": 1670506655000
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor2\\idle.meta": {
+    "time": 1670506655000
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor2\\run.meta": {
+    "time": 1670506655000
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\weapon\\weapon1\\attack.meta": {
+    "time": 1670506655000
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\weapon\\weapon1\\idle.meta": {
+    "time": 1670506655000
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\weapon\\weapon2\\attack.meta": {
+    "time": 1670506655000
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\weapon\\weapon2\\idle.meta": {
+    "time": 1670506655000
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Base\\EntityManager.ts.meta": {
+    "time": 1670506655000
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Base\\Singleton.ts.meta": {
+    "time": 1670506655000
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Base\\State.ts.meta": {
+    "time": 1670506655000
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Base\\StateMachine.ts.meta": {
+    "time": 1670506655000
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Base\\StateMachineTemplate.ts.meta": {
+    "time": 1670506655000
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Base\\SubStateMachine.ts.meta": {
+    "time": 1670506655000
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Enum\\index.ts.meta": {
+    "time": 1670506655000
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Global\\DataManager.ts.meta": {
+    "time": 1670506655000
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Global\\EventManager.ts.meta": {
+    "time": 1670506655000
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Global\\ResourceManager.ts.meta": {
+    "time": 1670506655000
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Utils\\index.ts.meta": {
+    "time": 1670506655000
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\scene-2d.scene": {
+    "time": 1691581190172.5332,
+    "uuid": "48c75f9a-9215-4519-9d61-13bc8eeedc2f",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\bg\\tile.png": {
+    "time": 1670506655000,
+    "uuid": "155ebd7e-9357-4155-acfc-fb5438af3d48",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\explosion\\explosion (1).png": {
+    "time": 1670506655000,
+    "uuid": "2c4e3bb3-7336-4d4e-a8d7-3eafa95d846f",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\explosion\\explosion (2).png": {
+    "time": 1670506655000,
+    "uuid": "0d43b4ea-a63d-4ebd-a25b-a93f85f86af4",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\explosion\\explosion (3).png": {
+    "time": 1670506655000,
+    "uuid": "69cdfa26-ab4f-4836-a719-5cbfdd4ce626",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\explosion\\explosion (4).png": {
+    "time": 1670506655000,
+    "uuid": "d0e55505-9d16-4c58-8769-69427fb8c951",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\explosion\\explosion (5).png": {
+    "time": 1670506655000,
+    "uuid": "facbf03e-9de3-43de-a995-1888b494e0b9",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\explosion\\explosion (6).png": {
+    "time": 1670506655000,
+    "uuid": "f325e61c-afa9-4bed-a69d-bd8835d78629",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\explosion\\explosion (7).png": {
+    "time": 1670506655000,
+    "uuid": "22cdc5d6-72e9-4c27-aaab-d8702321c131",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\joystick\\circle.png": {
+    "time": 1670506655000,
+    "uuid": "d9e82fae-bcb5-4fed-82a9-fbed98c5e079",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\bullet\\bullet1\\bullet1 (1).png": {
+    "time": 1670506655000,
+    "uuid": "23c36f17-b533-41fc-ada4-4c3408ec5597",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\bullet\\bullet2\\bullet2 (1).png": {
+    "time": 1670506655000,
+    "uuid": "c15456b3-2df6-44f1-bb74-5fec2d554675",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor1\\idle\\idle (1).png": {
+    "time": 1670506655000,
+    "uuid": "f0f5e564-2d98-4de1-bb92-794eeb1acffc",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor1\\idle\\idle (2).png": {
+    "time": 1670506655000,
+    "uuid": "948973f1-d0d7-4009-a6ac-b75d81682b06",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor1\\idle\\idle (3).png": {
+    "time": 1670506655000,
+    "uuid": "fbd2f8e1-fcfb-4833-88f6-1d2aabc7d208",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor1\\idle\\idle (4).png": {
+    "time": 1670506655000,
+    "uuid": "3f793c28-7ba4-49a0-8bfd-f39c447a3d24",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor1\\idle\\idle (5).png": {
+    "time": 1670506655000,
+    "uuid": "48566660-84d3-45f0-9779-232d13bba3b4",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor1\\idle\\idle (6).png": {
+    "time": 1670506655000,
+    "uuid": "1c6c1425-ca03-45c3-b9b3-01ad71034032",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor1\\run\\run (1).png": {
+    "time": 1670506655000,
+    "uuid": "030f870c-7083-4e63-af9c-0c8e4406b231",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor1\\run\\run (2).png": {
+    "time": 1670506655000,
+    "uuid": "38dbf9d6-4b70-4898-a328-ae498501ddbd",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor1\\run\\run (3).png": {
+    "time": 1670506655000,
+    "uuid": "07c0120a-620d-4d1d-b128-a2ffebffb96b",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor1\\run\\run (4).png": {
+    "time": 1670506655000,
+    "uuid": "06848286-3132-4ffa-bd9c-eba5eefd6ffe",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor1\\run\\run (5).png": {
+    "time": 1670506655000,
+    "uuid": "b545a1fc-5a8d-4b87-9f08-58193ef8f8a3",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor1\\run\\run (6).png": {
+    "time": 1670506655000,
+    "uuid": "98e36b14-a53b-4cdb-9787-4aac1911fa7c",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor2\\idle\\idle (1).png": {
+    "time": 1670506655000,
+    "uuid": "4bcec6e4-8ae3-4dc6-b680-230fb0e5cba1",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor2\\idle\\idle (2).png": {
+    "time": 1670506655000,
+    "uuid": "859e1dcd-5f25-46ce-bfb2-2fce53acd3ab",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor2\\idle\\idle (3).png": {
+    "time": 1670506655000,
+    "uuid": "8e5e2721-dd1b-4104-a176-e8724688e705",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor2\\idle\\idle (4).png": {
+    "time": 1670506655000,
+    "uuid": "ad1888b4-e372-4e48-bbeb-5f33b0fb50bf",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor2\\idle\\idle (5).png": {
+    "time": 1670506655000,
+    "uuid": "42bedea5-98e7-4c7c-bba4-2733775c4d1b",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor2\\idle\\idle (6).png": {
+    "time": 1670506655000,
+    "uuid": "a70a2ba8-14bc-4613-a6bf-e914fca9ae9a",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor2\\run\\run (1).png": {
+    "time": 1670506655000,
+    "uuid": "089afa87-f56d-4038-950c-0a3c3d625b43",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor2\\run\\run (2).png": {
+    "time": 1670506655000,
+    "uuid": "dde508f5-9208-42ee-aa19-e388489f0d5d",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor2\\run\\run (3).png": {
+    "time": 1670506655000,
+    "uuid": "547581ee-f0ef-4cc0-a168-1a821008dc00",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor2\\run\\run (4).png": {
+    "time": 1670506655000,
+    "uuid": "2f8cf8e1-92d9-422b-9ccb-444e0d7578e5",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor2\\run\\run (5).png": {
+    "time": 1670506655000,
+    "uuid": "ba54e885-1a08-47f1-b009-83b2763e209c",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor2\\run\\run (6).png": {
+    "time": 1670506655000,
+    "uuid": "0ce683e1-3afe-44ff-b24f-0be7ae40e49a",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\weapon\\weapon1\\attack\\attack (1).png": {
+    "time": 1670506655000,
+    "uuid": "2c2efb05-aaa7-4c95-8186-f16a448171aa",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\weapon\\weapon1\\attack\\attack (2).png": {
+    "time": 1670506655000,
+    "uuid": "d66a025a-0288-4cc4-88dd-7e3f5d75feef",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\weapon\\weapon1\\attack\\attack (3).png": {
+    "time": 1670506655000,
+    "uuid": "bb13c3df-251c-4b9b-a7e9-520ef89b6be6",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\weapon\\weapon1\\attack\\attack (4).png": {
+    "time": 1670506655000,
+    "uuid": "717f9b68-fbe2-4f31-ac87-476fa2875f1e",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\weapon\\weapon1\\attack\\attack (5).png": {
+    "time": 1670506655000,
+    "uuid": "ee283844-4937-4d21-9cb2-41e66321215a",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\weapon\\weapon1\\attack\\attack (6).png": {
+    "time": 1670506655000,
+    "uuid": "438fb15a-1e67-4cea-b018-940687e073b4",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\weapon\\weapon1\\attack\\attack (7).png": {
+    "time": 1670506655000,
+    "uuid": "05abc781-c414-41cf-8961-6a28a689e011",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\weapon\\weapon1\\idle\\idle (1).png": {
+    "time": 1670506655000,
+    "uuid": "f815a77d-5654-4a6a-86ef-be8f1efaa95e",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\weapon\\weapon2\\attack\\attack (1).png": {
+    "time": 1670506655000,
+    "uuid": "b2fd4156-6559-4260-800e-fa0cc22a8d50",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\weapon\\weapon2\\attack\\attack (2).png": {
+    "time": 1670506655000,
+    "uuid": "c981c147-7e05-464f-a119-287ba2173e76",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\weapon\\weapon2\\attack\\attack (3).png": {
+    "time": 1670506655000,
+    "uuid": "290e9ccf-fcf7-4de1-9fbd-087f099ff28a",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\weapon\\weapon2\\attack\\attack (4).png": {
+    "time": 1670506655000,
+    "uuid": "57693857-efef-407b-b05a-3fa03e2c15a1",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\weapon\\weapon2\\attack\\attack (5).png": {
+    "time": 1670506655000,
+    "uuid": "037bbd7b-863b-458a-9e82-af4344212b37",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\weapon\\weapon2\\attack\\attack (6).png": {
+    "time": 1670506655000,
+    "uuid": "fc7dd2b7-952e-4374-ae20-12b482325942",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\weapon\\weapon2\\attack\\attack (7).png": {
+    "time": 1670506655000,
+    "uuid": "20184d5d-69fc-4bd1-9ba7-c556a212397d",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\weapon\\weapon2\\idle\\idle (1).png": {
+    "time": 1670506655000,
+    "uuid": "d6c248fd-c31d-475f-948a-be099aca55d3",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\scene-2d.scene.meta": {
+    "time": 1691581190179.533
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\explosion\\explosion (2).png.meta": {
+    "time": 1691581190193.5327
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\bg\\tile.png.meta": {
+    "time": 1691581190195.5327
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\explosion\\explosion (1).png.meta": {
+    "time": 1691581190196.5325
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\explosion\\explosion (3).png.meta": {
+    "time": 1691581190196.5325
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\explosion\\explosion (4).png.meta": {
+    "time": 1691581190217.5337
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\explosion\\explosion (6).png.meta": {
+    "time": 1691581190222.5344
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\explosion\\explosion (5).png.meta": {
+    "time": 1691581190227.5334
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\explosion\\explosion (7).png.meta": {
+    "time": 1691581190228.5334
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\joystick\\circle.png.meta": {
+    "time": 1691581190231.5325
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\bullet\\bullet1\\bullet1 (1).png.meta": {
+    "time": 1691581190244.5322
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor1\\idle\\idle (1).png.meta": {
+    "time": 1691581190246.5325
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\bullet\\bullet2\\bullet2 (1).png.meta": {
+    "time": 1691581190248.5322
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor1\\idle\\idle (2).png.meta": {
+    "time": 1691581190249.5325
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor1\\idle\\idle (3).png.meta": {
+    "time": 1691581190252.5334
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor1\\idle\\idle (4).png.meta": {
+    "time": 1691581190272.5322
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor1\\idle\\idle (5).png.meta": {
+    "time": 1691581190275.532
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor1\\run\\run (1).png.meta": {
+    "time": 1691581190276.5325
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor1\\idle\\idle (6).png.meta": {
+    "time": 1691581190277.5322
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor1\\run\\run (2).png.meta": {
+    "time": 1691581190279.5327
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor1\\run\\run (3).png.meta": {
+    "time": 1691581190295.5327
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor1\\run\\run (4).png.meta": {
+    "time": 1691581190298.5322
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor1\\run\\run (5).png.meta": {
+    "time": 1691581190299.5322
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor2\\idle\\idle (1).png.meta": {
+    "time": 1691581190302.5337
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor1\\run\\run (6).png.meta": {
+    "time": 1691581190306.533
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor2\\idle\\idle (4).png.meta": {
+    "time": 1691581190326.5325
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor2\\idle\\idle (2).png.meta": {
+    "time": 1691581190328.5325
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor2\\idle\\idle (3).png.meta": {
+    "time": 1691581190329.5332
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor2\\idle\\idle (6).png.meta": {
+    "time": 1691581190332.5322
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor2\\idle\\idle (5).png.meta": {
+    "time": 1691581190333.532
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor2\\run\\run (1).png.meta": {
+    "time": 1691581190345.5322
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor2\\run\\run (2).png.meta": {
+    "time": 1691581190347.5322
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor2\\run\\run (3).png.meta": {
+    "time": 1691581190348.5322
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor2\\run\\run (5).png.meta": {
+    "time": 1691581190352.5334
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor2\\run\\run (4).png.meta": {
+    "time": 1691581190353.532
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\actor\\actor2\\run\\run (6).png.meta": {
+    "time": 1691581190365.5322
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\weapon\\weapon1\\attack\\attack (1).png.meta": {
+    "time": 1691581190367.5322
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\weapon\\weapon1\\attack\\attack (2).png.meta": {
+    "time": 1691581190369.5347
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\weapon\\weapon1\\attack\\attack (4).png.meta": {
+    "time": 1691581190372.5334
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\weapon\\weapon1\\attack\\attack (3).png.meta": {
+    "time": 1691581190374.5222
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\weapon\\weapon1\\attack\\attack (6).png.meta": {
+    "time": 1691581190391.5205
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\weapon\\weapon1\\attack\\attack (7).png.meta": {
+    "time": 1691581190393.5203
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\weapon\\weapon1\\attack\\attack (5).png.meta": {
+    "time": 1691581190394.52
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\weapon\\weapon1\\idle\\idle (1).png.meta": {
+    "time": 1691581190396.5205
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\weapon\\weapon2\\attack\\attack (1).png.meta": {
+    "time": 1691581190411.5208
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\weapon\\weapon2\\attack\\attack (2).png.meta": {
+    "time": 1691581190415.52
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\weapon\\weapon2\\attack\\attack (3).png.meta": {
+    "time": 1691581190419.5205
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\weapon\\weapon2\\attack\\attack (4).png.meta": {
+    "time": 1691581190420.5225
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\weapon\\weapon2\\attack\\attack (5).png.meta": {
+    "time": 1691581190421.5205
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\weapon\\weapon2\\attack\\attack (6).png.meta": {
+    "time": 1691581190428.5205
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\weapon\\weapon2\\attack\\attack (7).png.meta": {
+    "time": 1691581190430.5203
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\texture\\weapon\\weapon2\\idle\\idle (1).png.meta": {
+    "time": 1691581190437.5208
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scene.meta": {
+    "time": 1691581203216.2744
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scene": {
+    "time": 1697013015998.0166,
+    "uuid": "14a3552d-cefc-492c-9ed5-db458916ff15",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scene\\battle.scene.meta": {
+    "time": 1691581209627.1182
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scene\\battle.scene": {
+    "time": 1697013015998.0166,
+    "uuid": "c7d80ea0-94e0-4942-b16c-ccdd9e1e4f98",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\UI.meta": {
+    "time": 1691581410019.2961
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\UI": {
+    "time": 1696668046502.537,
+    "uuid": "fbd9a854-9252-44d3-a112-6902e7755f1c",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\UI\\JoyStickManager.ts.meta": {
+    "time": 1691581422851.863
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\UI\\JoyStickManager.ts": {
+    "time": 1696672116786.5469,
+    "uuid": "d392f0d2-61b3-491c-8c55-95db1ce2e646",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Entity.meta": {
+    "time": 1691636845956.9148
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Scene.meta": {
+    "time": 1691636845957.9045
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Entity\\Actor.meta": {
+    "time": 1691636845958.9648
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Scene\\BattleManager.ts.meta": {
+    "time": 1691636845962.3247
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Entity\\Actor\\ActorManager.ts.meta": {
+    "time": 1691636845966.4524
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Entity": {
+    "time": 1697009224366.5898,
+    "uuid": "15a8f2c5-77f2-466f-9c84-499713eae276",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Scene": {
+    "time": 1691636845946.504,
+    "uuid": "4129c46f-83ee-4252-b34c-f004038ace68",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Entity\\Actor": {
+    "time": 1691746591520.5813,
+    "uuid": "7b854ae7-91ba-474b-a696-26e773219b9a",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Scene\\BattleManager.ts": {
+    "time": 1697512893781.0598,
+    "uuid": "49108f50-4581-47ff-9202-a6dc3184111c",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Entity\\Actor\\ActorManager.ts": {
+    "time": 1697014982096.9941,
+    "uuid": "c7aec3de-e38f-45a1-91bf-7fd25be84ec5",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Common.meta": {
+    "time": 1691646040489.7078
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Common": {
+    "time": 1691551804291.3208,
+    "uuid": "9f345e60-6b41-4001-a754-9ff40752ca92",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\prefab.meta": {
+    "time": 1691656632895.2961
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\prefab": {
+    "time": 1697004824073.8738,
+    "uuid": "3acfcedd-14ce-4fd1-a8ed-d4d18a7a9f67",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\prefab\\Map.prefab.meta": {
+    "time": 1691656639321.181
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\prefab\\Map.prefab": {
+    "time": 1691656639320.1804,
+    "uuid": "0926bc5f-2dc1-4ddd-8003-179a865bca9a",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\prefab\\Actor.prefab.meta": {
+    "time": 1691658016378.246
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\prefab\\Actor.prefab": {
+    "time": 1697014879813.2556,
+    "uuid": "3566c129-7738-4937-81a7-bb0b557e6d9a",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Entity\\Actor\\ActorStateMachine.ts.meta": {
+    "time": 1691746591524.9636
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Entity\\Actor\\ActorStateMachine.ts": {
+    "time": 1691745989608.3486,
+    "uuid": "69b0f037-307b-4491-b42e-0b823cedba42",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\prefab\\Weapon1.prefab.meta": {
+    "time": 1692100988434.5232
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\prefab\\Weapon1.prefab": {
+    "time": 1696666883826.4753,
+    "uuid": "5abff8cc-eaf1-4293-885b-9f30d1a314b1",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Entity\\Weapon.meta": {
+    "time": 1696663095996.7444
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Entity\\Weapon\\WeaponManager.ts.meta": {
+    "time": 1696663095997.745
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Entity\\Weapon\\WeaponStateMachine.ts.meta": {
+    "time": 1696663095998.744
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Entity\\Weapon": {
+    "time": 1696663095993.7458,
+    "uuid": "1806ad67-5ad4-4764-961d-b1716fdef0d6",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Entity\\Weapon\\WeaponManager.ts": {
+    "time": 1697011628287.1023,
+    "uuid": "91630fa5-0525-426f-9adb-1a3db4f1491f",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Entity\\Weapon\\WeaponStateMachine.ts": {
+    "time": 1697010217385.733,
+    "uuid": "6ee0bd00-f05d-47d1-b619-bfd0ccda1c0b",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\UI\\ShotManager.ts.meta": {
+    "time": 1696668046504.5374
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\UI\\ShotManager.ts": {
+    "time": 1696995590583.7695,
+    "uuid": "5c361118-f35f-42a3-904f-8977d4f8df44",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\prefab\\Bullet2.prefab.meta": {
+    "time": 1696672363700.4917
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\prefab\\Bullet2.prefab": {
+    "time": 1697003185405.1401,
+    "uuid": "5e287cd0-e0e2-4ef0-810e-d7d56cc2abfb",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Entity\\Bullet.meta": {
+    "time": 1696672919193.8108
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Entity\\Bullet\\BulletManager.ts.meta": {
+    "time": 1696672919196.8103
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Entity\\Bullet\\BulletStateMachine.ts.meta": {
+    "time": 1696672919198.8103
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Entity\\Bullet": {
+    "time": 1696672919188.9263,
+    "uuid": "dd490738-a02d-4927-83f4-cde37dcd1557",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Entity\\Bullet\\BulletManager.ts": {
+    "time": 1697181765724.032,
+    "uuid": "c4ad3e29-9daf-4dad-b209-c36ffe05fca4",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Entity\\Bullet\\BulletStateMachine.ts": {
+    "time": 1696729565543.993,
+    "uuid": "7fdcca77-0c7a-473d-a293-6bb1dd18669f",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\prefab\\Explosion.prefab.meta": {
+    "time": 1697004824075.8738
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\resources\\prefab\\Explosion.prefab": {
+    "time": 1697004824074.8743,
+    "uuid": "56355668-fd1d-400a-b278-a7bc148c77cd",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Entity\\Explosion.meta": {
+    "time": 1697009224371.3398
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Entity\\Explosion\\ExplosionManager.ts.meta": {
+    "time": 1697009224372.3398
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Entity\\Explosion\\ExplosionStateMachine.ts.meta": {
+    "time": 1697009224372.3398
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Entity\\Explosion": {
+    "time": 1697009224369.338,
+    "uuid": "75f9a51b-45d3-439e-af52-6b96c972b2e3",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Entity\\Explosion\\ExplosionManager.ts": {
+    "time": 1697008748199.6592,
+    "uuid": "615018d3-0c69-4dc5-9966-493ea186bec9",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Entity\\Explosion\\ExplosionStateMachine.ts": {
+    "time": 1697181807898.4695,
+    "uuid": "04a73c84-0e98-4a66-bf9e-f243de83e858",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Global\\ObjectPoolManager.ts.meta": {
+    "time": 1697181878945.7893
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Global\\ObjectPoolManager.ts": {
+    "time": 1697448954703.806,
+    "uuid": "99dc3028-4479-4e1d-bea5-e4d11b5fc1d0",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Global\\NetWorkManager.ts.meta": {
+    "time": 1697530515083.7522
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Global\\NetWorkManager.ts": {
+    "time": 1697512310962.5984,
+    "uuid": "bdd8dc79-bd11-44e6-89d4-863c6f59a065",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Common\\index.ts.meta": {
+    "time": 1670506655000
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Common\\index.ts": {
+    "time": 1670506655000,
+    "uuid": "2a7bdf4b-b85b-43ee-b69d-7f801d03ca83",
+    "missing": false
+  }
+}

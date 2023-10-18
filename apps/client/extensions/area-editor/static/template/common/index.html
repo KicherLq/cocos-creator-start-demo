@@ -1,0 +1,164 @@
+<div id="generate-panel" class="panel">
+    <div id="setting-panel" class="settingsfull">
+        <div class="wrap">
+            <ui-section expand="" header="游戏设置" class="config section">
+                <div class="row">
+                    <ui-prop class="mb-10">
+                        <ui-checkbox id="checkVersion1_0">1.0服务器</ui-checkbox>
+                    </ui-prop>
+
+                    <ui-prop class="mb-10">
+                        <ui-label slot="label">游戏类型</ui-label>
+                        <ui-select id="selectGameType" slot="content" value="0">
+                            <option value="0">扑克</option>
+                            <option value="1">麻将</option>
+                            <option value="2">其他</option>
+                        </ui-select>
+                    </ui-prop>
+
+                    <ui-prop class="mb-10">
+                        <ui-label slot="label">货币类型</ui-label>
+                        <ui-select id="selectCurrencyType" slot="content" value="0">
+                            <option value="0">银子</option>
+                            <option value="1">金豆</option>
+                            <option value="2">积分</option>
+                        </ui-select>
+                    </ui-prop>
+                    
+                    <ui-prop class="mb-10">
+                        <ui-checkbox id="checkGameSocketProxy" value="true">公共代理-游戏</ui-checkbox>
+                    </ui-prop>
+
+                    <ui-prop class="mb-10">
+                        <ui-checkbox id="checkRoomSocketProxy" value="true">公共代理-房间</ui-checkbox>
+                    </ui-prop>
+
+                    <ui-prop class="mb-10">
+                        <ui-label slot="label">适配选择(0:完全宽度适配 1:完全高度适配)</ui-label>
+                        <ui-slider id="propResolutionValue" value="0" min="0" max="100"></ui-slider>
+                    </ui-prop>
+                </div>
+            </ui-section>
+
+            <ui-section expand="" header="聊天" class="config section">
+                <div class="row">
+                    <ui-prop class="mb-10">
+                        <ui-checkbox id="propChatRightShowFlag" value="false">聊天右边显示</ui-checkbox>
+                    </ui-prop>
+
+                    <ui-prop class="mb-10">
+                        <ui-label slot="label">男性配置</ui-label>
+                        <ui-asset id="chatManConfig" droppable="cc.JsonAsset"></ui-asset>
+                    </ui-prop>
+                    <ui-prop class="mb-10">
+                        <ui-label slot="label">女性配置</ui-label>
+                        <ui-asset id="chatFemaleConfig" droppable="cc.JsonAsset"></ui-asset>
+                    </ui-prop>
+                </div>
+            </ui-section>
+
+            <ui-section expand="" header="个人信息" class="config section">
+                <div class="row">
+                    <ui-prop class="mb-10">
+                        <ui-checkbox id="personalInfoShowBout">是否显示对局数</ui-checkbox>
+                    </ui-prop>
+                    <ui-prop class="mb-10">
+                        <ui-checkbox id="personalInfoShowDeposit">是否显示银子</ui-checkbox>
+                    </ui-prop>
+                    <ui-prop class="mb-10">
+                        <ui-checkbox id="personalInfoShowSafeBox">是否显示保险箱</ui-checkbox>
+                    </ui-prop>
+                    <ui-prop class="mb-10">
+                        <ui-checkbox id="personalInfoShowScore">是否显示积分</ui-checkbox>
+                    </ui-prop>
+                    <ui-prop class="mb-10">
+                        <ui-checkbox id="personalInfoShowPrestige">是否显示声望</ui-checkbox>
+                    </ui-prop>
+                    <ui-prop class="mb-10">
+                        <ui-checkbox id="personalInfoShowJindou">是否显示金豆</ui-checkbox>
+                    </ui-prop>
+                    
+                    <ui-prop class="mb-10">
+                        <ui-label slot="label">自定义属性-1</ui-label>
+                        <ui-asset id="personalInfoCustomPrefab1" droppable="cc.Prefab"></ui-asset>
+                    </ui-prop>
+                    <ui-prop class="mb-10">
+                        <ui-label slot="label">自定义属性-2</ui-label>
+                        <ui-asset id="personalInfoCustomPrefab2" droppable="cc.Prefab"></ui-asset>
+                    </ui-prop>
+                    <ui-prop class="mb-10">
+                        <ui-label slot="label">自定义属性-3</ui-label>
+                        <ui-asset id="personalInfoCustomPrefab3" droppable="cc.Prefab"></ui-asset>
+                    </ui-prop>
+                </div>
+            </ui-section>
+
+            <ui-section id=prop expand="" header="游戏规则" class="config section">
+                <div class="row">
+                    <ui-tab id='ConfigRuleChoose' value="0">
+                        <ui-button value="0">好友房</ui-button>
+                    </ui-tab>
+                </div>
+    
+                <div class="row">
+                    <ui-prop class="mb-10">
+                        <ui-label slot="label">规则1</ui-label>
+                        <ui-asset id= "rules1" droppable="cc.Prefab"></ui-asset>
+                    </ui-prop>
+                    <ui-prop class="mb-10">
+                        <ui-label slot="label">规则2</ui-label>
+                        <ui-asset id= "rules2" droppable="cc.Prefab"></ui-asset>
+                    </ui-prop>
+                    <ui-prop class="mb-10">
+                        <ui-label slot="label">规则3</ui-label>
+                        <ui-asset id= "rules3" droppable="cc.Prefab"></ui-asset>
+                    </ui-prop>
+                </div>
+            </ui-section>
+
+            <ui-section id=prop expand="" header="资源设置" class="config section">
+                <div class="row">
+                    <ui-prop class="mb-10">
+                        <ui-label slot="label">游戏图标</ui-label>
+                        <ui-asset id="resGameIcon" droppable="cc.ImageAsset"></ui-asset>
+                    </ui-prop>
+                    <ui-prop class="mb-10">
+                        <ui-label slot="label">男头像-小</ui-label>
+                        <ui-asset id="resPortraitBoyS" droppable="cc.ImageAsset"></ui-asset>
+                    </ui-prop>
+                    <ui-prop class="mb-10">
+                        <ui-label slot="label">男头像-中</ui-label>
+                        <ui-asset id="resPortraitBoyM" droppable="cc.ImageAsset"></ui-asset>
+                    </ui-prop>
+                    <ui-prop class="mb-10">
+                        <ui-label slot="label">女头像-小</ui-label>
+                        <ui-asset id="resPortraitGirlS" droppable="cc.ImageAsset"></ui-asset>
+                    </ui-prop>
+                    <ui-prop class="mb-10">
+                        <ui-label slot="label">女头像-中</ui-label>
+                        <ui-asset id="resPortraitGirlM" droppable="cc.ImageAsset"></ui-asset>
+                    </ui-prop>
+                    <ui-prop class="mb-10">
+                        <ui-label slot="label">大厅标题字体</ui-label>
+                        <ui-asset id="resHallAreaTitleFont" droppable="cc.Font"></ui-asset>
+                    </ui-prop>
+
+                    <ui-prop class="mb-10">
+                        <ui-label slot="label">房间字体1</ui-label>
+                        <ui-asset id="resHallRoomTitleFont1" droppable="cc.Font"></ui-asset>
+                    </ui-prop>
+                    <ui-prop class="mb-10">
+                        <ui-label slot="label">房间字体2</ui-label>
+                        <ui-asset id="resHallRoomTitleFont2" droppable="cc.Font"></ui-asset>
+                    </ui-prop>
+                </div>
+            </ui-section>
+
+            <div class="row">
+                <ui-prop class="mb-10">
+                    <ui-button id="save-btn" style="width: 100%;" >保存</ui-button>
+                </ui-prop>
+            </div>
+        </div>
+    </div>
+</div>

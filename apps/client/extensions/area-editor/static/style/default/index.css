@@ -1,0 +1,250 @@
+:host {
+    display: flex;
+}
+
+.panel {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    padding: 8px;
+    overflow: auto;
+}
+
+.panel>.settings {
+    width: 33%;
+    margin-left: 6px;
+    padding: 4px;
+    border: 1px solid var(--color-normal-border-weaker);
+    border-radius: calc(var(--size-normal-radius) * 1px);
+    overflow: auto;
+    user-select: text;
+}
+
+.panel>.settingsfull {
+    width: 100%;
+    margin-left: 6px;
+    padding: 4px;
+    border: 1px solid var(--color-normal-border-weaker);
+    border-radius: calc(var(--size-normal-radius) * 1px);
+    overflow: auto;
+    user-select: text;
+}
+
+.panel>.content {
+    flex: 1;
+    margin-left: 6px;
+    margin-right: 6px;
+    padding: 4px;
+    border: 1px solid var(--color-normal-border-weaker);
+    border-radius: calc(var(--size-normal-radius) * 1px);
+    overflow: auto;
+    user-select: text;
+    align-items: center; display: flex; justify-content: center;
+
+}
+
+.panel>.content .layout {
+    margin-left: 150px;
+    margin-top: 200px;
+    width: 512px;
+    height: 270px;
+    display: block;
+    padding: 4px;
+    border: 1px solid var(--color-normal-border-weaker);
+    border-radius: calc(var(--size-normal-radius) * 1px);
+}
+
+.panel>.content>.layout .layout_col {
+    height: 100%;
+    width: 33%;
+    float : left;
+}
+
+.panel>.content>.layout .slot1 {
+    height: 100%;
+    width: 100%;
+    background-color:azure;
+    border: 2px solid;
+    border-color: blueviolet;
+    align-items: center; display: flex; justify-content: center;
+}
+
+.panel>.content>.layout .slot2 {
+    height: 50%;
+    width: 100%;
+    background-color:azure;
+    border: 2px solid;
+    border-color: blueviolet;
+    align-items: center; display: flex; justify-content: center;
+}
+
+.panel>.content>.layout .slot3 {
+    height: 33%;
+    width: 100%;
+    background-color:azure;
+    border: 2px solid;
+    border-color: blueviolet;
+    align-items: center; display: flex; justify-content: center;
+}
+
+.panel>.content>.layout .slot4 {
+    height: 25%;
+    width: 100%;
+    background-color:azure;
+    border: 2px solid;
+    border-color: blueviolet;
+    align-items: center; display: flex; justify-content: center;
+}
+
+.panel>.content .preview {
+    width: 1066;
+    height: 100%;
+    display: block;
+}
+
+.area-slot {
+    width : 100%;
+    height: 100%;
+    background-color: green;
+}
+
+.room-slot {
+    width : 100%;
+    height: 100%;
+    background-color: rebeccapurple;
+}
+
+.custom-slot {
+    width : 100%;
+    height: 100%;
+    background-color: darkslategray;
+}
+
+.moregame-slot {
+    width : 100%;
+    height: 100%;
+    background-color: crimson;
+}
+
+.game-slot {
+    width : 100%;
+    height: 100%;
+    background-color: darkorange;
+}
+
+/* @media only screen and (max-width: 500px) {
+    .panel {
+        flex-direction: column;
+    }
+    .panel>.settings {
+        width: auto;
+        margin-right: 6px;
+    }
+} */
+
+.panel>.settings .section {
+    display: block;
+    margin-bottom: 16px;
+    user-select: text;
+}
+
+.panel>.settings .row {
+    margin: 16px 0;
+    user-select: text;
+}
+
+.panel>.settings h2,
+.panel>.settings h3,
+.panel>.settings h4,
+.panel>.settings h5 {
+    padding-bottom: 8px;
+}
+
+.panel>.settings .mb-10 {
+    margin-bottom: 10px;
+}
+
+.panel>.settings .area {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    background-color:green
+}
+
+.panel>.settings .room {
+    width: 100%;
+    margin-bottom: 10px;
+    background-color:rebeccapurple
+}
+
+.panel>.settings .custom {
+    width: 100%;
+    margin-bottom: 10px;
+    background-color:darkslategray
+}
+
+.panel>.settings .moregame {
+    width: 100%;
+    margin-bottom: 10px;
+    background-color:crimson
+}
+
+.panel>.settings .game {
+    width: 100%;
+    margin-bottom: 10px;
+    background-color:darkorange
+}
+
+.panel .ui-checkbox-wrap ui-checkbox {
+    margin-right: 20px;
+}
+.panel ui-select {
+    width: 100%;
+}
+
+.panel ui-color,
+.panel ui-file,
+.panel ui-gradient,
+.panel ui-input,
+.panel ui-num-input,
+.panel ui-slider,
+.panel ui-node,
+.panel ui-component,
+.panel ui-asset {
+    width: 100%;
+}
+
+.panel .ui-drag-wrap ui-drag-item {
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 15px;
+    background-color: var(--color-normal-fill-important);
+}
+
+.panel .ui-drag-wrap ui-drag-area {
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 15px;
+    border: dashed 1px var(--color-normal-border-important);
+}
+
+.panel .ui-drag-wrap ui-drag-area[hoving] {
+    border-color: var(--color-success-border);
+}
+
+.panel .ui-icon-wrap .icon-box {
+    display: inline-block;
+    width: 160px;
+    font-size: 12px;
+}
+
+.panel .dialog-wrap ui-button {
+    margin-right: 20px;
+}
+
+img[src=""],img:not([src])
+{
+    opacity: 255;
+}
