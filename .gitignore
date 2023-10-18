@@ -160,3 +160,11 @@ Thumbs.db
 .vscode/
 
 apps/client/assets/Scripts/Common
+
+apps/client/library
+apps/client/temp
+apps/client/local
+apps/client/build
+apps/client/profiles
+apps/client/native
+apps/client/preview-template

@@ -6,7 +6,7 @@ export class NetWorkManager extends Singleton {
         return super.GetInstance<NetWorkManager>();
     }
 
-    private PORT = 8080;
+    private PORT = 9876;
     private __ws: WebSocket = null;
 
     connect() {

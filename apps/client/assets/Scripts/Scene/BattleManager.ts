@@ -38,7 +38,7 @@ export class BattleManager extends Component {
 
     async connectServer() {
         const e = await NetWorkManager.Instance.connect().catch(() => false);
-        if(e !== false) {
+        if(!e) {
             await new Promise(rs => setTimeout(rs, 1000));
             await this.connectServer();
         }

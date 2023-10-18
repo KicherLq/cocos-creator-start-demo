@@ -24,12 +24,12 @@
     "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Entity/Explosion/ExplosionStateMachine.ts": "./chunks/89/89433a4107b7c6e2b23ddb0a9306d18f22159a92.js",
     "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Entity/Weapon/WeaponManager.ts": "./chunks/8d/8ddead7c6282d40e627164c93c612d95a36fadfa.js",
     "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Entity/Weapon/WeaponStateMachine.ts": "./chunks/e3/e37a9575c45da881a2df3657ea4ed61ccb5a94db.js",
-    "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Global/NetWorkManager.ts": "./chunks/25/2570bf0b1891719dffa01ff0ffea533106987e8c.js",
     "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Global/ObjectPoolManager.ts": "./chunks/d2/d20edac7389c0f233c8155d3ee3360a3701b13c5.js",
-    "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Scene/BattleManager.ts": "./chunks/f6/f6bcf53cb88bd55e3a7feaceeba8b803cf04f3fa.js",
     "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Common/index.ts": "./chunks/46/462c5cf39e6688d022610deebf3060440fdbbd6d.js",
     "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Common/Enum.ts": "./chunks/31/318b49163c7b42bc3c7c981a62e8a9b2a69a60ea.js",
-    "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Common/State.ts": "./chunks/ee/ee53a28fda396584816ab17fc82023f9b7025873.js"
+    "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Common/State.ts": "./chunks/ee/ee53a28fda396584816ab17fc82023f9b7025873.js",
+    "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Global/NetWorkManager.ts": "./chunks/af/af54ace7161644e66c8344791fc31a0385b0f92a.js",
+    "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Scene/BattleManager.ts": "./chunks/5e/5e87353b6ae12917d63279385fcbd4dfa14b2c78.js"
   },
   "scopes": {
     "./chunks/ce/cee638a986ad8fae09398db255647defcaa6612a.js": {
@@ -77,10 +77,10 @@
       "__unresolved_18": "./chunks/52/5229e75de61c96e95bf41a8dd20dc041669bb65c.js",
       "__unresolved_19": "./chunks/2a/2ad3d99e8591cf9f8c065c9a7a0c4403526b0e6e.js",
       "__unresolved_2": "./chunks/44/44eca973a094a1c98a6924c682f471080d1e2fba.js",
-      "__unresolved_20": "./chunks/25/2570bf0b1891719dffa01ff0ffea533106987e8c.js",
+      "__unresolved_20": "./chunks/af/af54ace7161644e66c8344791fc31a0385b0f92a.js",
       "__unresolved_21": "./chunks/d2/d20edac7389c0f233c8155d3ee3360a3701b13c5.js",
       "__unresolved_22": "./chunks/1d/1d2d1a793902fa2eb57a39616ded1eb92b806f7b.js",
-      "__unresolved_23": "./chunks/f6/f6bcf53cb88bd55e3a7feaceeba8b803cf04f3fa.js",
+      "__unresolved_23": "./chunks/5e/5e87353b6ae12917d63279385fcbd4dfa14b2c78.js",
       "__unresolved_24": "./chunks/20/202b98fa79e2a3ca434c062937f95fe6699b53b8.js",
       "__unresolved_25": "./chunks/4c/4c4f21df20ea6e09a8ecf1f711c0f3e321e285f2.js",
       "__unresolved_26": "./chunks/c5/c5a752a0cf1841d6b91936b70984058d9aa30b8c.js",
@@ -195,7 +195,7 @@
     "./chunks/20/202b98fa79e2a3ca434c062937f95fe6699b53b8.js": {
       "cc": "./chunks/ce/cee638a986ad8fae09398db255647defcaa6612a.js"
     },
-    "./chunks/f6/f6bcf53cb88bd55e3a7feaceeba8b803cf04f3fa.js": {
+    "./chunks/5e/5e87353b6ae12917d63279385fcbd4dfa14b2c78.js": {
       "__unresolved_0": "./chunks/be/be027f973d8ff1c6fe3dcfebbc993118a793ec1b.js",
       "__unresolved_1": "./chunks/52/5229e75de61c96e95bf41a8dd20dc041669bb65c.js",
       "__unresolved_2": "./chunks/20/202b98fa79e2a3ca434c062937f95fe6699b53b8.js",
@@ -205,10 +205,10 @@
       "__unresolved_6": "./chunks/31/318b49163c7b42bc3c7c981a62e8a9b2a69a60ea.js",
       "__unresolved_7": "./chunks/02/02d4d8353224a546647d0c1ad61c8a04003a8208.js",
       "__unresolved_8": "./chunks/d2/d20edac7389c0f233c8155d3ee3360a3701b13c5.js",
-      "__unresolved_9": "./chunks/25/2570bf0b1891719dffa01ff0ffea533106987e8c.js",
+      "__unresolved_9": "./chunks/af/af54ace7161644e66c8344791fc31a0385b0f92a.js",
       "cc": "./chunks/ce/cee638a986ad8fae09398db255647defcaa6612a.js"
     },
-    "./chunks/25/2570bf0b1891719dffa01ff0ffea533106987e8c.js": {
+    "./chunks/af/af54ace7161644e66c8344791fc31a0385b0f92a.js": {
       "__unresolved_0": "./chunks/be/be027f973d8ff1c6fe3dcfebbc993118a793ec1b.js",
       "__unresolved_1": "./chunks/0b/0b73300c152c310ae48fc9e89f2dda10db7b405e.js",
       "cc": "./chunks/ce/cee638a986ad8fae09398db255647defcaa6612a.js"

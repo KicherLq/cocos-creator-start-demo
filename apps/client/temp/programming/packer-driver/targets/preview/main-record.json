@@ -451,7 +451,7 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 425663745.30619997,
+      "mTimestamp": 429268278.4818,
       "chunkId": "010182db671f99578bcde2099a003988e813fbd4",
       "imports": [
         {
@@ -2138,10 +2138,10 @@
     },
     "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Scene/BattleManager.ts": {
       "mTimestamp": {
-        "mtime": 1697512893781.0598,
+        "mtime": 1697617379941.1309,
         "uuid": "49108f50-4581-47ff-9202-a6dc3184111c"
       },
-      "chunkId": "2f90e5cb45e87ade38fad2c6308b6f0bcfeb7df5",
+      "chunkId": "1a820d461cedfcf4d22fc246bf1a42de0b6dd01d",
       "imports": [
         {
           "value": "cce:/internal/code-quality/cr.mjs",
@@ -3908,10 +3908,10 @@
     },
     "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Global/NetWorkManager.ts": {
       "mTimestamp": {
-        "mtime": 1697512310962.5984,
+        "mtime": 1697615885801.7712,
         "uuid": "bdd8dc79-bd11-44e6-89d4-863c6f59a065"
       },
-      "chunkId": "3a7fe4503b3d9d683a1717dee3f0e8d601d51666",
+      "chunkId": "763650d3cb676d853f17e6deb2c390a3b7d5a26c",
       "imports": [
         {
           "value": "cce:/internal/code-quality/cr.mjs",
