@@ -11,6 +11,7 @@ import { EntityTypeEnum, InputTypeEnum } from "../Common/Enum";
 import { SpriteFrame } from "cc";
 import { BulletManager } from "../Entity/Bullet/BulletManager";
 import { ObjectPoolManager } from "../Global/ObjectPoolManager";
+import { NetWorkManager } from "../Global/NetWorkManager";
 const { ccclass, property } = _decorator;
 
 @ccclass('BattleManager')
@@ -28,9 +29,19 @@ export class BattleManager extends Component {
     }
     
     async start() {
-        await this.loadRes();
-        this.initMap();
-        this.shouldUpdate = true;
+        // await this.loadRes();
+        // this.initMap();
+        // this.shouldUpdate = true;
+        await this.connectServer();
+        NetWorkManager.Instance.sendMessage('hello, here is client.');
+    }
+
+    async connectServer() {
+        const e = await NetWorkManager.Instance.connect().catch(() => false);
+        if(e !== false) {
+            await new Promise(rs => setTimeout(rs, 1000));
+            await this.connectServer();
+        }
     }
 
     initMap() {
