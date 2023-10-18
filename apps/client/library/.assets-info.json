@@ -5,7 +5,7 @@
     "missing": false
   },
   "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts": {
-    "time": 1697601384280.0295,
+    "time": 1697608571063.5007,
     "uuid": "a5ff1131-2769-49ad-92d3-4d7f4b7c2b24",
     "missing": false
   },
@@ -795,7 +795,7 @@
     "time": 1691646040489.7078
   },
   "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Common": {
-    "time": 1691551804291.3208,
+    "time": 1697613777466.587,
     "uuid": "9f345e60-6b41-4001-a754-9ff40752ca92",
     "missing": false
   },
@@ -957,6 +957,22 @@
   "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Common\\index.ts": {
     "time": 1670506655000,
     "uuid": "2a7bdf4b-b85b-43ee-b69d-7f801d03ca83",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Common\\Enum.ts.meta": {
+    "time": 1697613777469.0923
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Common\\State.ts.meta": {
+    "time": 1697613777469.594
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Common\\Enum.ts": {
+    "time": 1697610079217.2932,
+    "uuid": "7c7283fb-e0a4-4d3e-9cd8-1f3ba1c12819",
+    "missing": false
+  },
+  "C:\\Users\\ctwl\\Downloads\\cocos-nodejs-io-game-start-demo-master\\apps\\client\\assets\\Scripts\\Common\\State.ts": {
+    "time": 1697610112142.9136,
+    "uuid": "d25251c6-77ee-4b5d-b1f2-4f546f3abf87",
     "missing": false
   }
 }

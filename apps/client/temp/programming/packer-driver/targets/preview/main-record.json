@@ -451,8 +451,8 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 413607541.19909996,
-      "chunkId": "44e2fabe13c16d8b87bdac45c211f4bb452a36ec",
+      "mTimestamp": 425663745.30619997,
+      "chunkId": "010182db671f99578bcde2099a003988e813fbd4",
       "imports": [
         {
           "value": "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Base/EntityManager.ts",
@@ -539,7 +539,7 @@
           }
         },
         {
-          "value": "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Common/index.ts",
+          "value": "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Common/Enum.ts",
           "resolved": "__unresolved_6",
           "loc": {
             "start": {
@@ -548,12 +548,12 @@
             },
             "end": {
               "line": 10,
-              "column": 122
+              "column": 121
             }
           }
         },
         {
-          "value": "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Entity/Actor/ActorManager.ts",
+          "value": "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Common/State.ts",
           "resolved": "__unresolved_7",
           "loc": {
             "start": {
@@ -562,12 +562,12 @@
             },
             "end": {
               "line": 11,
-              "column": 135
+              "column": 122
             }
           }
         },
         {
-          "value": "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Entity/Actor/ActorStateMachine.ts",
+          "value": "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Common/index.ts",
           "resolved": "__unresolved_8",
           "loc": {
             "start": {
@@ -576,12 +576,12 @@
             },
             "end": {
               "line": 12,
-              "column": 140
+              "column": 122
             }
           }
         },
         {
-          "value": "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Entity/Bullet/BulletManager.ts",
+          "value": "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Entity/Actor/ActorManager.ts",
           "resolved": "__unresolved_9",
           "loc": {
             "start": {
@@ -590,12 +590,12 @@
             },
             "end": {
               "line": 13,
-              "column": 137
+              "column": 135
             }
           }
         },
         {
-          "value": "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Entity/Bullet/BulletStateMachine.ts",
+          "value": "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Entity/Actor/ActorStateMachine.ts",
           "resolved": "__unresolved_10",
           "loc": {
             "start": {
@@ -604,12 +604,12 @@
             },
             "end": {
               "line": 14,
-              "column": 142
+              "column": 140
             }
           }
         },
         {
-          "value": "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Entity/Explosion/ExplosionManager.ts",
+          "value": "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Entity/Bullet/BulletManager.ts",
           "resolved": "__unresolved_11",
           "loc": {
             "start": {
@@ -618,12 +618,12 @@
             },
             "end": {
               "line": 15,
-              "column": 143
+              "column": 137
             }
           }
         },
         {
-          "value": "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Entity/Explosion/ExplosionStateMachine.ts",
+          "value": "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Entity/Bullet/BulletStateMachine.ts",
           "resolved": "__unresolved_12",
           "loc": {
             "start": {
@@ -632,12 +632,12 @@
             },
             "end": {
               "line": 16,
-              "column": 148
+              "column": 142
             }
           }
         },
         {
-          "value": "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Entity/Weapon/WeaponManager.ts",
+          "value": "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Entity/Explosion/ExplosionManager.ts",
           "resolved": "__unresolved_13",
           "loc": {
             "start": {
@@ -646,12 +646,12 @@
             },
             "end": {
               "line": 17,
-              "column": 137
+              "column": 143
             }
           }
         },
         {
-          "value": "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Entity/Weapon/WeaponStateMachine.ts",
+          "value": "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Entity/Explosion/ExplosionStateMachine.ts",
           "resolved": "__unresolved_14",
           "loc": {
             "start": {
@@ -660,12 +660,12 @@
             },
             "end": {
               "line": 18,
-              "column": 142
+              "column": 148
             }
           }
         },
         {
-          "value": "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Enum/index.ts",
+          "value": "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Entity/Weapon/WeaponManager.ts",
           "resolved": "__unresolved_15",
           "loc": {
             "start": {
@@ -674,12 +674,12 @@
             },
             "end": {
               "line": 19,
-              "column": 120
+              "column": 137
             }
           }
         },
         {
-          "value": "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Global/DataManager.ts",
+          "value": "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Entity/Weapon/WeaponStateMachine.ts",
           "resolved": "__unresolved_16",
           "loc": {
             "start": {
@@ -688,12 +688,12 @@
             },
             "end": {
               "line": 20,
-              "column": 128
+              "column": 142
             }
           }
         },
         {
-          "value": "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Global/EventManager.ts",
+          "value": "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Enum/index.ts",
           "resolved": "__unresolved_17",
           "loc": {
             "start": {
@@ -702,12 +702,12 @@
             },
             "end": {
               "line": 21,
-              "column": 129
+              "column": 120
             }
           }
         },
         {
-          "value": "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Global/NetWorkManager.ts",
+          "value": "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Global/DataManager.ts",
           "resolved": "__unresolved_18",
           "loc": {
             "start": {
@@ -716,12 +716,12 @@
             },
             "end": {
               "line": 22,
-              "column": 131
+              "column": 128
             }
           }
         },
         {
-          "value": "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Global/ObjectPoolManager.ts",
+          "value": "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Global/EventManager.ts",
           "resolved": "__unresolved_19",
           "loc": {
             "start": {
@@ -730,12 +730,12 @@
             },
             "end": {
               "line": 23,
-              "column": 134
+              "column": 129
             }
           }
         },
         {
-          "value": "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Global/ResourceManager.ts",
+          "value": "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Global/NetWorkManager.ts",
           "resolved": "__unresolved_20",
           "loc": {
             "start": {
@@ -744,12 +744,12 @@
             },
             "end": {
               "line": 24,
-              "column": 132
+              "column": 131
             }
           }
         },
         {
-          "value": "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Scene/BattleManager.ts",
+          "value": "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Global/ObjectPoolManager.ts",
           "resolved": "__unresolved_21",
           "loc": {
             "start": {
@@ -758,12 +758,12 @@
             },
             "end": {
               "line": 25,
-              "column": 129
+              "column": 134
             }
           }
         },
         {
-          "value": "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/UI/JoyStickManager.ts",
+          "value": "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Global/ResourceManager.ts",
           "resolved": "__unresolved_22",
           "loc": {
             "start": {
@@ -772,12 +772,12 @@
             },
             "end": {
               "line": 26,
-              "column": 128
+              "column": 132
             }
           }
         },
         {
-          "value": "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/UI/ShotManager.ts",
+          "value": "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Scene/BattleManager.ts",
           "resolved": "__unresolved_23",
           "loc": {
             "start": {
@@ -786,12 +786,12 @@
             },
             "end": {
               "line": 27,
-              "column": 124
+              "column": 129
             }
           }
         },
         {
-          "value": "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Utils/index.ts",
+          "value": "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/UI/JoyStickManager.ts",
           "resolved": "__unresolved_24",
           "loc": {
             "start": {
@@ -800,12 +800,12 @@
             },
             "end": {
               "line": 28,
-              "column": 121
+              "column": 128
             }
           }
         },
         {
-          "value": "file:///D:/cocos-dashboard-editors/Creator/3.7.3/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts",
+          "value": "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/UI/ShotManager.ts",
           "resolved": "__unresolved_25",
           "loc": {
             "start": {
@@ -814,6 +814,34 @@
             },
             "end": {
               "line": 29,
+              "column": 124
+            }
+          }
+        },
+        {
+          "value": "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Utils/index.ts",
+          "resolved": "__unresolved_26",
+          "loc": {
+            "start": {
+              "line": 30,
+              "column": 7
+            },
+            "end": {
+              "line": 30,
+              "column": 121
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocos-dashboard-editors/Creator/3.7.3/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts",
+          "resolved": "__unresolved_27",
+          "loc": {
+            "start": {
+              "line": 31,
+              "column": 7
+            },
+            "end": {
+              "line": 31,
               "column": 137
             }
           }
@@ -860,6 +888,20 @@
           "resolved": {
             "type": "module",
             "url": "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Base/SubStateMachine.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Common/Enum.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Common/State.ts"
           },
           "messages": []
         },
@@ -2408,10 +2450,10 @@
     },
     "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Common/State.ts": {
       "mTimestamp": {
-        "mtime": 1697014537017.1143,
-        "uuid": "42da4c80-fc49-4ceb-b7be-c70c33070aed"
+        "mtime": 1697610112142.9136,
+        "uuid": "d25251c6-77ee-4b5d-b1f2-4f546f3abf87"
       },
-      "chunkId": "ce6ecfad6a305e1c67ebd484997f19a6100fc896",
+      "chunkId": "ee53a28fda396584816ab17fc82023f9b7025873",
       "imports": [
         {
           "value": "cce:/internal/code-quality/cr.mjs",
@@ -2440,9 +2482,26 @@
       ]
     },
     "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Common/Enum.ts": {
-      "erroneous": true,
-      "mTimestamp": 0,
-      "chunkId": "fefaf0758b3e808ed1c0eba60537798c27c75896"
+      "mTimestamp": {
+        "mtime": 1697610079217.2932,
+        "uuid": "7c7283fb-e0a4-4d3e-9cd8-1f3ba1c12819"
+      },
+      "chunkId": "318b49163c7b42bc3c7c981a62e8a9b2a69a60ea",
+      "imports": [
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
     },
     "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Entity/Actor/ActorStateMachine.ts": {
       "mTimestamp": {

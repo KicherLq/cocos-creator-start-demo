@@ -1448,5 +1448,13 @@
   "2a7bdf4b-b85b-43ee-b69d-7f801d03ca83": {
     "url": "db://assets/Scripts/Common/index.ts",
     "value": {}
+  },
+  "7c7283fb-e0a4-4d3e-9cd8-1f3ba1c12819": {
+    "url": "db://assets/Scripts/Common/Enum.ts",
+    "value": {}
+  },
+  "d25251c6-77ee-4b5d-b1f2-4f546f3abf87": {
+    "url": "db://assets/Scripts/Common/State.ts",
+    "value": {}
   }
 }
