@@ -958,32 +958,6 @@
       },
       "timestamp": 1697613777825
     },
-    "763650d3cb676d853f17e6deb2c390a3b7d5a26c": {
-      "imports": {
-        "__unresolved_0": {
-          "resolved": {
-            "type": "chunk",
-            "id": "cceb4f795e6e637cc67c120b5b44ef3a584b486a"
-          },
-          "messages": []
-        },
-        "__unresolved_1": {
-          "resolved": {
-            "type": "chunk",
-            "id": "0b73300c152c310ae48fc9e89f2dda10db7b405e"
-          },
-          "messages": []
-        },
-        "cc": {
-          "resolved": {
-            "type": "chunk",
-            "id": "b3642faa74312f2f490b6f820104e34558faa045"
-          },
-          "messages": []
-        }
-      },
-      "timestamp": 1697615889619
-    },
     "010182db671f99578bcde2099a003988e813fbd4": {
       "imports": {
         "__unresolved_0": {
@@ -1080,7 +1054,7 @@
         "__unresolved_20": {
           "resolved": {
             "type": "chunk",
-            "id": "763650d3cb676d853f17e6deb2c390a3b7d5a26c"
+            "id": "d12f7a59fecd61f63fe429f5e936927e056adfb2"
           },
           "messages": []
         },
@@ -1101,7 +1075,7 @@
         "__unresolved_23": {
           "resolved": {
             "type": "chunk",
-            "id": "1a820d461cedfcf4d22fc246bf1a42de0b6dd01d"
+            "id": "0e71d911aea00edc0cfc3685b55666ba8e68f51f"
           },
           "messages": []
         },
@@ -1183,9 +1157,35 @@
           "messages": []
         }
       },
-      "timestamp": 1697617382284
+      "timestamp": 1697619906822
     },
-    "1a820d461cedfcf4d22fc246bf1a42de0b6dd01d": {
+    "d12f7a59fecd61f63fe429f5e936927e056adfb2": {
+      "imports": {
+        "__unresolved_0": {
+          "resolved": {
+            "type": "chunk",
+            "id": "cceb4f795e6e637cc67c120b5b44ef3a584b486a"
+          },
+          "messages": []
+        },
+        "__unresolved_1": {
+          "resolved": {
+            "type": "chunk",
+            "id": "0b73300c152c310ae48fc9e89f2dda10db7b405e"
+          },
+          "messages": []
+        },
+        "cc": {
+          "resolved": {
+            "type": "chunk",
+            "id": "b3642faa74312f2f490b6f820104e34558faa045"
+          },
+          "messages": []
+        }
+      },
+      "timestamp": 1697619906876
+    },
+    "0e71d911aea00edc0cfc3685b55666ba8e68f51f": {
       "imports": {
         "__unresolved_0": {
           "resolved": {
@@ -1253,7 +1253,7 @@
         "__unresolved_9": {
           "resolved": {
             "type": "chunk",
-            "id": "763650d3cb676d853f17e6deb2c390a3b7d5a26c"
+            "id": "d12f7a59fecd61f63fe429f5e936927e056adfb2"
           },
           "messages": []
         },
@@ -1265,7 +1265,7 @@
           "messages": []
         }
       },
-      "timestamp": 1697617382380
+      "timestamp": 1697619907105
     }
   },
   "entries": {
@@ -1297,7 +1297,7 @@
     "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Common/index.ts": "462c5cf39e6688d022610deebf3060440fdbbd6d",
     "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Common/Enum.ts": "318b49163c7b42bc3c7c981a62e8a9b2a69a60ea",
     "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Common/State.ts": "ee53a28fda396584816ab17fc82023f9b7025873",
-    "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Global/NetWorkManager.ts": "763650d3cb676d853f17e6deb2c390a3b7d5a26c",
-    "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Scene/BattleManager.ts": "1a820d461cedfcf4d22fc246bf1a42de0b6dd01d"
+    "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Global/NetWorkManager.ts": "d12f7a59fecd61f63fe429f5e936927e056adfb2",
+    "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Scene/BattleManager.ts": "0e71d911aea00edc0cfc3685b55666ba8e68f51f"
   }
 }
