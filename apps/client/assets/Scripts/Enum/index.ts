@@ -13,6 +13,7 @@ export enum EventEnum {
     shot = 'shot',
     explosionBorn = 'explosionBorn',
     bulletBorn = 'bulletBorn',
+    clientSync = 'clientSync',
 }
 
 export enum PrefabPathEnum {

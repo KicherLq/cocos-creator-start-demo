@@ -45,8 +45,12 @@ export class NetWorkManager extends Singleton {
         });
     }
 
-    sendMessage(data: string) {
-        this.__ws.send(data);
+    sendMessage(name: string, data: any) {
+        const msg = {
+            name,
+            data,
+        }
+        this.__ws.send(JSON.stringify(msg));
     }
 
     listenMessage(name: string, cb: Function, ctx: unknown) {

@@ -1,17 +1,19 @@
-import { Node } from "cc";
+import { Node, input } from 'cc';
 import { _decorator, Component } from "cc";
-import DataManager from "../Global/DataManager";
+import DataManager from '../Global/DataManager';
 import { JoyStickManager } from "../UI/JoyStickManager";
 import { ActorManager } from "../Entity/Actor/ActorManager";
 import { ResourceManager } from "../Global/ResourceManager";
 import { Prefab } from "cc";
 import { instantiate } from "cc";
-import { PrefabPathEnum, TexturePathEnum } from "../Enum";
-import { EntityTypeEnum, InputTypeEnum } from "../Common/Enum";
+import { EventEnum, PrefabPathEnum, TexturePathEnum } from "../Enum";
+import { ApiMsgEnum, EntityTypeEnum, InputTypeEnum } from "../Common/Enum";
 import { SpriteFrame } from "cc";
 import { BulletManager } from "../Entity/Bullet/BulletManager";
 import { ObjectPoolManager } from "../Global/ObjectPoolManager";
 import { NetWorkManager } from "../Global/NetWorkManager";
+import EventManager from "../Global/EventManager";
+import { IClientInput } from '../Common/State';
 const { ccclass, property } = _decorator;
 
 @ccclass('BattleManager')
@@ -21,26 +23,35 @@ export class BattleManager extends Component {
     private shouldUpdate: boolean = false;
 
     onLoad() {
-        this._stage = this.node.getChildByName('Stage');
-        this._ui    = this.node.getChildByName('UI');
-        this._stage.destroyAllChildren();
-        DataManager.Instance.jm = this._ui.getComponentInChildren(JoyStickManager);
-        DataManager.Instance.stage = this.node.getChildByName('Stage');
     }
     
     async start() {
-        // await this.loadRes();
-        // this.initMap();
-        // this.shouldUpdate = true;
-        await this.connectServer();
-        NetWorkManager.Instance.sendMessage('hello, here is client.');
-        NetWorkManager.Instance.listenMessage(
-            'kicher',
-            (data) => { 
-                console.log('listenMessage', data); 
-            },
-            this
-        );
+        this.clearGame();
+        await Promise.all([this.loadRes(), this.connectServer()]);
+        this.initGame();
+    }
+
+    private initGame() {
+        DataManager.Instance.jm = this._ui.getComponentInChildren(JoyStickManager);
+        DataManager.Instance.stage = this.node.getChildByName('Stage');
+        this.initMap();
+        this.shouldUpdate = true;
+        EventManager.Instance.on(EventEnum.clientSync, this.handleClientSync, this);
+    }
+
+    private clearGame() {
+        this._stage = this.node.getChildByName('Stage');
+        this._ui    = this.node.getChildByName('UI');
+        this._stage.destroyAllChildren();
+        EventManager.Instance.off(EventEnum.clientSync, this.handleClientSync, this);
+    }
+
+    private handleClientSync(input: IClientInput) {
+        const msg = {
+            input,
+            frameId: DataManager.Instance.frameId++,
+        }
+        NetWorkManager.Instance.sendMessage(ApiMsgEnum.MsgClientSync, msg);
     }
 
     async connectServer() {

@@ -4,11 +4,12 @@ import { EntityTypeEnum, InputTypeEnum } from '../../Common/Enum';
 import { IActor } from '../../Common/State';
 import { EntityManager } from '../../Base/EntityManager';
 import { ActorStateMachine } from './ActorStateMachine';
-import { EntityStateEnum } from '../../Enum';
+import { EntityStateEnum, EventEnum } from '../../Enum';
 import { instantiate } from 'cc';
 import { WeaponManager } from '../Weapon/WeaponManager';
 import { rad2Angle } from '../../Utils';
 import { ProgressBar } from 'cc';
+import EventManager from '../../Global/EventManager';
 const { ccclass, property } = _decorator;
 
 @ccclass('ActorManager')
@@ -39,7 +40,7 @@ export class ActorManager extends EntityManager {
         }
         if(DataManager.Instance.jm.output.length()) {
             const {x, y} = DataManager.Instance.jm.output;
-            DataManager.Instance.applyInput({
+            EventManager.Instance.emit(EventEnum.clientSync, {
                 id: 1,
                 type: InputTypeEnum.ActorMove,
                 direction: {
