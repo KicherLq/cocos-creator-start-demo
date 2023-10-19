@@ -619,7 +619,7 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 431792655.23490006,
+      "mTimestamp": 435791537.5579,
       "chunkId": "0c146fe3eb4259fdb26870e54e2ac76bca11ed62",
       "imports": [
         {
@@ -1414,10 +1414,10 @@
     },
     "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Global/DataManager.ts": {
       "mTimestamp": {
-        "mtime": 1697015358920.9937,
+        "mtime": 1697623122470.2764,
         "uuid": "1682ed16-4e4f-46b3-8aca-92baecd30b9d"
       },
-      "chunkId": "5229e75de61c96e95bf41a8dd20dc041669bb65c",
+      "chunkId": "5e94dd1d3c0bd00255cc7edf519138ad3ec264fe",
       "imports": [
         {
           "value": "cce:/internal/code-quality/cr.mjs",
@@ -1657,10 +1657,10 @@
     },
     "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Enum/index.ts": {
       "mTimestamp": {
-        "mtime": 1697009782255.589,
+        "mtime": 1697621688259.5652,
         "uuid": "393286c2-7b09-44d1-955f-049e7e5b36ea"
       },
-      "chunkId": "a26e8190f4d769c4ee327936862de6196928e140",
+      "chunkId": "b9175b6b73c63a876efbbc18ed5858cf77dba265",
       "imports": [
         {
           "value": "cc"
@@ -2056,10 +2056,10 @@
     },
     "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Entity/Actor/ActorManager.ts": {
       "mTimestamp": {
-        "mtime": 1697014982096.9941,
+        "mtime": 1697621718725.2395,
         "uuid": "c7aec3de-e38f-45a1-91bf-7fd25be84ec5"
       },
-      "chunkId": "009418793f530fa5f3e716ac73507994654135c7",
+      "chunkId": "b34c981f66a9dbee798060affae4cbb27db34ef6",
       "imports": [
         {
           "value": "cce:/internal/code-quality/cr.mjs",
@@ -2146,11 +2146,11 @@
           "loc": {
             "start": {
               "line": 7,
-              "column": 32
+              "column": 43
             },
             "end": {
               "line": 7,
-              "column": 44
+              "column": 55
             }
           }
         },
@@ -2205,6 +2205,20 @@
             "end": {
               "line": 11,
               "column": 32
+            }
+          }
+        },
+        {
+          "value": "../../Global/EventManager",
+          "resolved": "__unresolved_8",
+          "loc": {
+            "start": {
+              "line": 12,
+              "column": 25
+            },
+            "end": {
+              "line": 12,
+              "column": 52
             }
           }
         }
@@ -2301,15 +2315,22 @@
             "url": "cce:/internal/x/cc"
           },
           "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Global/EventManager.ts"
+          },
+          "messages": []
         }
       ]
     },
     "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Scene/BattleManager.ts": {
       "mTimestamp": {
-        "mtime": 1697619892822.677,
+        "mtime": 1697623183788.3477,
         "uuid": "49108f50-4581-47ff-9202-a6dc3184111c"
       },
-      "chunkId": "ab23d492a4fd9f43934098f091315f9558db371b",
+      "chunkId": "286a03984478a48335ce02d8ff6fc58877022707",
       "imports": [
         {
           "value": "cce:/internal/code-quality/cr.mjs",
@@ -2422,11 +2443,11 @@
           "loc": {
             "start": {
               "line": 9,
-              "column": 48
+              "column": 59
             },
             "end": {
               "line": 9,
-              "column": 57
+              "column": 68
             }
           }
         },
@@ -2436,11 +2457,11 @@
           "loc": {
             "start": {
               "line": 10,
-              "column": 46
+              "column": 58
             },
             "end": {
               "line": 10,
-              "column": 62
+              "column": 74
             }
           }
         },
@@ -2496,6 +2517,20 @@
             "end": {
               "line": 14,
               "column": 57
+            }
+          }
+        },
+        {
+          "value": "../Global/EventManager",
+          "resolved": "__unresolved_10",
+          "loc": {
+            "start": {
+              "line": 15,
+              "column": 25
+            },
+            "end": {
+              "line": 15,
+              "column": 49
             }
           }
         }
@@ -2613,6 +2648,13 @@
             "url": "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Global/NetWorkManager.ts"
           },
           "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Global/EventManager.ts"
+          },
+          "messages": []
         }
       ]
     },
@@ -2651,10 +2693,10 @@
     },
     "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Common/Enum.ts": {
       "mTimestamp": {
-        "mtime": 1697610079217.2932,
+        "mtime": 1697623521129.2766,
         "uuid": "7c7283fb-e0a4-4d3e-9cd8-1f3ba1c12819"
       },
-      "chunkId": "318b49163c7b42bc3c7c981a62e8a9b2a69a60ea",
+      "chunkId": "ec5e471ef8f9659d3d99dc906a23539f7446cd7d",
       "imports": [
         {
           "value": "cc"
@@ -4076,10 +4118,10 @@
     },
     "file:///C:/Users/ctwl/Downloads/cocos-nodejs-io-game-start-demo-master/apps/client/assets/Scripts/Global/NetWorkManager.ts": {
       "mTimestamp": {
-        "mtime": 1697619211093.1423,
+        "mtime": 1697623199872.7498,
         "uuid": "bdd8dc79-bd11-44e6-89d4-863c6f59a065"
       },
-      "chunkId": "ecdda9e5edb9168833c9899b453a6eae15ef002f",
+      "chunkId": "536c2a7e84864947b8e20797d9ffe4c4d84e95f5",
       "imports": [
         {
           "value": "cce:/internal/code-quality/cr.mjs",

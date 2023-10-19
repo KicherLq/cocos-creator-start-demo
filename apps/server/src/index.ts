@@ -1,6 +1,5 @@
 import WebSocket, { RawData, WebSocketServer } from "ws";
 import { symlinkCommon } from "./Utils";
-import { setInterval } from "timers/promises";
 import { ApiMsgEnum } from "./Common/Enum";
 
 symlinkCommon();
