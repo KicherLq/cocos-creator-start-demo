@@ -30,6 +30,8 @@ wss.on('connection', (socket: WebSocket) => {
     // // socket.send('hello, here is server.');
     // socket.send(JSON.stringify(obj));
     setInterval(() => {
+        const temp = inputs;
+        inputs = [];
         const msg = {
             name: ApiMsgEnum.MsgServerSync,
             data: {
