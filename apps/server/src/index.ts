@@ -35,7 +35,7 @@ wss.on('connection', (socket: WebSocket) => {
         const msg = {
             name: ApiMsgEnum.MsgServerSync,
             data: {
-                inputs
+                inputs: temp,
             }
         }
         socket.send(JSON.stringify(msg));

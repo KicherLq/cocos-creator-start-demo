@@ -60,4 +60,11 @@ export class NetWorkManager extends Singleton {
             this.map.set(name, [{ cb, ctx }]);
         }
     }
+
+    unListenMessage(name: string, cb: Function, ctx: unknown) {
+        if (this.map.has(name)) {
+            const index = this.map.get(name).findIndex((i) => cb === i.cb && i.ctx === ctx);
+            index > -1 && this.map.get(name).splice(index, 1);
+        }
+    }
 }

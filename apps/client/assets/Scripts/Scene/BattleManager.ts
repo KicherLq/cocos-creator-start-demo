@@ -37,6 +37,7 @@ export class BattleManager extends Component {
         this.initMap();
         this.shouldUpdate = true;
         EventManager.Instance.on(EventEnum.clientSync, this.handleClientSync, this);
+        NetWorkManager.Instance.listenMessage(ApiMsgEnum.MsgServerSync, this.handleServerSync, this);
     }
 
     private clearGame() {
@@ -44,6 +45,7 @@ export class BattleManager extends Component {
         this._ui    = this.node.getChildByName('UI');
         this._stage.destroyAllChildren();
         EventManager.Instance.off(EventEnum.clientSync, this.handleClientSync, this);
+        NetWorkManager.Instance.unListenMessage(ApiMsgEnum.MsgServerSync, this.handleServerSync, this);
     }
 
     private handleClientSync(input: IClientInput) {
@@ -52,6 +54,12 @@ export class BattleManager extends Component {
             frameId: DataManager.Instance.frameId++,
         }
         NetWorkManager.Instance.sendMessage(ApiMsgEnum.MsgClientSync, msg);
+    }
+
+    private handleServerSync({inputs}: any) {
+        for (const input of inputs) {
+            DataManager.Instance.applyInput(input);
+        }
     }
 
     async connectServer() {
