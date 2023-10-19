@@ -4,6 +4,7 @@ import { ApiMsgEnum } from "./Common/Enum";
 import { MyServer } from "./Core/MyServer";
 import { Connection } from './Core/Connection';
 import { PlayerManager } from "./Biz/PlayerManager";
+import { IApiPlayerJoinReq } from "./Common/Api";
 
 symlinkCommon();
 
@@ -31,7 +32,7 @@ server.on('disconnection', (connection: Connection) => {
     console.log('players size after remove: ', PlayerManager.Instance.players.size);
 });
 
-server.setApi(ApiMsgEnum.ApiPlayerJoin, (connection: Connection, data: any) => {
+server.setApi(ApiMsgEnum.ApiPlayerJoin, (connection: Connection, data: IApiPlayerJoinReq) => {
     const { nickname } = data;
     const player = PlayerManager.Instance.createPlayer({nickname, connection});
     connection.playerId = player.id;

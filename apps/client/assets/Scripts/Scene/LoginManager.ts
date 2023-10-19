@@ -33,7 +33,9 @@ export class LoginManager extends Component {
             return;
         }
 
-        const {success, error, res} = await NetWorkManager.Instance.callApi(ApiMsgEnum.ApiPlayerJoin, {nickname});
+        const {success, error, res} = await NetWorkManager.Instance.callApi(ApiMsgEnum.ApiPlayerJoin, {
+            nickname,
+        });
         if(!success) {
             console.error(error);
             return;

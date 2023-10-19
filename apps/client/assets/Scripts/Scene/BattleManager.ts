@@ -14,6 +14,7 @@ import { ObjectPoolManager } from "../Global/ObjectPoolManager";
 import { NetWorkManager } from "../Global/NetWorkManager";
 import EventManager from "../Global/EventManager";
 import { IClientInput } from '../Common/State';
+import { IMsgServerSync } from '../../../../server/src/Common/Msg';
 const { ccclass, property } = _decorator;
 
 @ccclass('BattleManager')
@@ -56,7 +57,7 @@ export class BattleManager extends Component {
         NetWorkManager.Instance.sendMessage(ApiMsgEnum.MsgClientSync, msg);
     }
 
-    private handleServerSync({inputs}: any) {
+    private handleServerSync({inputs}: IMsgServerSync) {
         for (const input of inputs) {
             DataManager.Instance.applyInput(input);
         }
