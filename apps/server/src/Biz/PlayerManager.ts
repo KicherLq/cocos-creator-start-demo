@@ -39,4 +39,9 @@ export class PlayerManager extends Singleton {
             roomId,
         };
     }
+
+    public getPlayersView(players: Set<Player> = this.__players) {
+        //扩展运算符可以用于展开对象，数组
+        return [...players].map(p => this.getPlayerView(p));
+    }
 }

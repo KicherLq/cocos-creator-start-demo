@@ -12,3 +12,10 @@ export interface IApiPlayerJoinReq {
 export interface IApiPlayerJoinRes {
     player: IPlayer,
 }
+
+export interface IApiPlayerListReq {
+}
+
+export interface IApiPlayerListRes {
+    list: IPlayer[],
+}

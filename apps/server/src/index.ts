@@ -4,7 +4,7 @@ import { ApiMsgEnum } from "./Common/Enum";
 import { MyServer } from "./Core/MyServer";
 import { Connection } from './Core/Connection';
 import { PlayerManager } from "./Biz/PlayerManager";
-import { IApiPlayerJoinReq } from "./Common/Api";
+import { IApiPlayerJoinReq, IApiPlayerJoinRes, IApiPlayerListReq, IApiPlayerListRes } from "./Common/Api";
 
 symlinkCommon();
 
@@ -32,7 +32,7 @@ server.on('disconnection', (connection: Connection) => {
     console.log('players size after remove: ', PlayerManager.Instance.players.size);
 });
 
-server.setApi(ApiMsgEnum.ApiPlayerJoin, (connection: Connection, data: IApiPlayerJoinReq) => {
+server.setApi(ApiMsgEnum.ApiPlayerJoin, (connection: Connection, data: IApiPlayerJoinReq): IApiPlayerJoinRes => {
     const { nickname } = data;
     const player = PlayerManager.Instance.createPlayer({nickname, connection});
     connection.playerId = player.id;
@@ -41,6 +41,13 @@ server.setApi(ApiMsgEnum.ApiPlayerJoin, (connection: Connection, data: IApiPlaye
         player: PlayerManager.Instance.getPlayerView(player),
     };
 });
+
+server.setApi(ApiMsgEnum.ApiPlayerList, (connection: Connection, data: IApiPlayerListReq): IApiPlayerListRes => {
+    return {
+        list: PlayerManager.Instance.getPlayersView(),
+    };
+});
+
 server.start().then(() => {
     console.log('server start ok.');
 }).catch((error) => {
