@@ -6,6 +6,12 @@ interface IItem {
     ctx: unknown;
 }
 
+interface ICallApiRet {
+    success: boolean,
+    error?: Error,
+    res?: any,
+}
+
 export class NetWorkManager extends Singleton {
     static get Instance() {
         return super.GetInstance<NetWorkManager>();
@@ -42,6 +48,29 @@ export class NetWorkManager extends Singleton {
                     console.error(error);
                 }
             };
+        });
+    }
+
+    //WebSocket模拟HTTP服务
+    callApi(name: string, data: any): Promise<ICallApiRet> {
+        return new Promise((resolve, reject) => {
+            try {
+                //设置定时器用于判断超时的情况
+                const timer = setTimeout(() => {
+                    resolve({ success: false, error: new Error('Time out!') });
+                    this.unListenMessage(name, cb, null);
+                }, 5000);
+                const cb = (res) => {
+                    resolve(res);
+                    //如果未超时则清空定时器
+                    clearTimeout(timer);
+                    this.unListenMessage(name, cb, null);
+                }
+                this.listenMessage(name, cb, null);
+                this.sendMessage(name, data);
+            } catch (error) {
+                resolve({ success: false, error: new Error('Time out!') });
+            }
         });
     }
 

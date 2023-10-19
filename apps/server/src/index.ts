@@ -2,11 +2,16 @@ import WebSocket, { RawData, WebSocketServer } from "ws";
 import { symlinkCommon } from "./Utils";
 import { ApiMsgEnum } from "./Common/Enum";
 import { MyServer } from "./Core/MyServer";
+import { Connection } from "./Core/Connection";
 
 symlinkCommon();
 
 const server = new MyServer({
     port: 9876
+});
+
+server.setApi(ApiMsgEnum.ApiPlayerJoin, (connection: Connection, data: any) => {
+    return data + ', server got it.';
 });
 server.start().then(() => {
     console.log('server start ok.');

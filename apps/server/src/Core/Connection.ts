@@ -1,6 +1,7 @@
 import { EventEmitter } from "stream";
 import { MyServer } from "./MyServer";
 import { WebSocket } from "ws";
+import { message } from '../../../client/extensions/ccc-references-finder/@types/packages/asset-db/@types/message';
 
 interface IItem {
     cb: Function;
@@ -21,7 +22,29 @@ export class Connection extends EventEmitter {
             try {
                 const msg = JSON.parse(str);
                 const {name, data} = msg;
-                const {frameId, input} = data;
+
+                if (this.server.apiMap.has(name)) {
+                    try {
+                        const cb = this.server.apiMap.get(name);
+                        const res = cb.call(null, this, data);
+                        this.sendMessage(name, {
+                            success: true,
+                            res,
+                        });
+                    } catch (error) {
+                        this.sendMessage(name, {
+                            success: false,
+                            error: error.message,
+                        });
+                    }
+
+                } else{
+                    if(this.msgMap.has(name)) {
+                        this.msgMap.get(name).forEach(({cb, ctx}) => {
+                            cb.call(ctx, data);
+                        });
+                    }
+                }
             } catch (error) {
                 console.error(error);
             }
