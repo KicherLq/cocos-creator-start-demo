@@ -2,16 +2,43 @@ import WebSocket, { RawData, WebSocketServer } from "ws";
 import { symlinkCommon } from "./Utils";
 import { ApiMsgEnum } from "./Common/Enum";
 import { MyServer } from "./Core/MyServer";
-import { Connection } from "./Core/Connection";
+import { Connection } from './Core/Connection';
+import { PlayerManager } from "./Biz/PlayerManager";
 
 symlinkCommon();
+
+//给Connection模块隐形添加playerId字段
+declare module "./Core/Connection" {
+    interface Connection {
+        playerId: number,
+    }
+}
 
 const server = new MyServer({
     port: 9876
 });
 
+server.on('connection', () => {
+    console.log('connection comes', server.connections.size);
+});
+
+server.on('disconnection', (connection: Connection) => {
+    console.log('connection close', server.connections.size);
+    console.log('players size before remove: ', PlayerManager.Instance.players.size);
+    if(connection.playerId) {
+        PlayerManager.Instance.removePlayer(connection.playerId);
+    }
+    console.log('players size after remove: ', PlayerManager.Instance.players.size);
+});
+
 server.setApi(ApiMsgEnum.ApiPlayerJoin, (connection: Connection, data: any) => {
-    return data + ', server got it.';
+    const { nickname } = data;
+    const player = PlayerManager.Instance.createPlayer({nickname, connection});
+    connection.playerId = player.id;
+
+    return {
+        player: PlayerManager.Instance.getPlayerView(player),
+    };
 });
 server.start().then(() => {
     console.log('server start ok.');

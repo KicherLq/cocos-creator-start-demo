@@ -1,7 +1,6 @@
 import { EventEmitter } from "stream";
 import { MyServer } from "./MyServer";
 import { WebSocket } from "ws";
-import { message } from '../../../client/extensions/ccc-references-finder/@types/packages/asset-db/@types/message';
 
 interface IItem {
     cb: Function;

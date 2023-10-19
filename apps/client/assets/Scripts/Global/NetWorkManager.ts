@@ -17,20 +17,29 @@ export class NetWorkManager extends Singleton {
         return super.GetInstance<NetWorkManager>();
     }
 
+    public isConnected: boolean = false;
+
     private PORT = 9876;
     private __ws: WebSocket = null;
     private map: Map<string, Array<IItem>> = new Map();
 
     connect() {
         return new Promise((resolve, reject) => {
+            if(this.isConnected) {
+                resolve(true);
+                return;
+            }
             this.__ws = new WebSocket(`ws://localhost:${this.PORT}`);
             this.__ws.onopen = () => {
+                this.isConnected = true;
                 resolve(true);
             };
             this.__ws.onclose = () => {
+                this.isConnected = false;
                 reject(false);
             };
             this.__ws.onerror = (error) => {
+                this.isConnected = false;
                 console.error(error);
                 reject(false);
             };
