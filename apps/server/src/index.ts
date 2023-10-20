@@ -29,6 +29,7 @@ server.on('disconnection', (connection: Connection) => {
     if(connection.playerId) {
         PlayerManager.Instance.removePlayer(connection.playerId);
     }
+    PlayerManager.Instance.syncPlayers();
     console.log('players size after remove: ', PlayerManager.Instance.players.size);
 });
 
@@ -36,6 +37,9 @@ server.setApi(ApiMsgEnum.ApiPlayerJoin, (connection: Connection, data: IApiPlaye
     const { nickname } = data;
     const player = PlayerManager.Instance.createPlayer({nickname, connection});
     connection.playerId = player.id;
+
+    //每当有玩家登陆服务端发送所有玩家的列表用于客户端同步
+    PlayerManager.Instance.syncPlayers();
 
     return {
         player: PlayerManager.Instance.getPlayerView(player),

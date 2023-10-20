@@ -1,6 +1,6 @@
 import { IApiPlayerJoinReq, IApiPlayerJoinRes, IApiPlayerListReq, IApiPlayerListRes } from "./Api"
 import { ApiMsgEnum } from "./Enum"
-import { IMsgClientSync, IMsgServerSync } from "./Msg"
+import { IMsgClientSync, IMsgPlayerList, IMsgServerSync } from "./Msg"
 
 export interface IModel {
     api: {
@@ -16,5 +16,6 @@ export interface IModel {
     msg: {
         [ApiMsgEnum.MsgClientSync]: IMsgClientSync,
         [ApiMsgEnum.MsgServerSync]: IMsgServerSync,
+        [ApiMsgEnum.MsgPlayerList]: IMsgPlayerList,
     }
 }

@@ -17,5 +17,6 @@ export enum ApiMsgEnum {
     ApiPlayerJoin = 'ApiPlayerJoin',
     ApiPlayerList = 'ApiPlayerList',
     MsgClientSync = 'MsgClientSync',
+    MsgPlayerList = 'MsgPlayerList',
     MsgServerSync = 'MsgServerSync',
 }

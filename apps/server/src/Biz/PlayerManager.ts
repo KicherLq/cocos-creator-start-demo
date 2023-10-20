@@ -2,6 +2,7 @@ import Singleton from "../Base/Singleton";
 import { IApiPlayerJoinReq } from "../Common/Api";
 import { Player } from "./Player";
 import { Connection } from '../Core/Connection';
+import { ApiMsgEnum } from '../Common/Enum';
 
 export class PlayerManager extends Singleton {
     static get Instance() {
@@ -28,6 +29,14 @@ export class PlayerManager extends Singleton {
         if(player) {
             this.__idMapPlayer.delete(player.id);
             this.__players.delete(player);
+        }
+    }
+
+    public syncPlayers() {
+        for (const player of this.__players) {
+            player.connection.sendMessage(ApiMsgEnum.MsgPlayerList, {
+                list: this.getPlayersView(),
+            });
         }
     }
 

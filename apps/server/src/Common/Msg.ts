@@ -1,3 +1,4 @@
+import { IPlayer } from "./Api";
 import { IClientInput } from "./State";
 
 export interface IMsgClientSync {
@@ -8,4 +9,8 @@ export interface IMsgClientSync {
 export interface IMsgServerSync {
     lastFrameId: number,
     inputs: IClientInput[],
+}
+
+export interface IMsgPlayerList {
+    list: IPlayer[],
 }
