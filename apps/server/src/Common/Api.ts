@@ -1,8 +1,13 @@
 
 export interface IPlayer {
-    id: number;
-    nickname: string;
-    roomId: number;
+    id: number,
+    nickname: string,
+    roomId: number,
+}
+
+export interface IRoom {
+    roomId: number,
+    players: IPlayer[],
 }
 
 export interface IApiPlayerJoinReq {
@@ -18,4 +23,11 @@ export interface IApiPlayerListReq {
 
 export interface IApiPlayerListRes {
     list: IPlayer[],
+}
+
+export interface IApiRoomCreateReq {
+}
+
+export interface IApiRoomCreateRes {
+    room: IRoom,
 }

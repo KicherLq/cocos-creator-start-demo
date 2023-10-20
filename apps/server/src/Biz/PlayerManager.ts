@@ -16,6 +16,9 @@ export class PlayerManager extends Singleton {
         return this.__players;
     }
     private __idMapPlayer: Map<number, Player> = new Map();
+    get idMapPlayer() {
+        return this.__idMapPlayer;
+    }
 
     public createPlayer({nickname, connection}: IApiPlayerJoinReq & {connection: Connection}): Player {
         const player = new Player({ id: this.__nextPlayerId++, nickname, connection });

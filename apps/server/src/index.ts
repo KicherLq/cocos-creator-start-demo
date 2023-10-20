@@ -4,7 +4,8 @@ import { ApiMsgEnum } from "./Common/Enum";
 import { MyServer } from "./Core/MyServer";
 import { Connection } from './Core/Connection';
 import { PlayerManager } from "./Biz/PlayerManager";
-import { IApiPlayerJoinReq, IApiPlayerJoinRes, IApiPlayerListReq, IApiPlayerListRes } from "./Common/Api";
+import { IApiPlayerJoinReq, IApiPlayerJoinRes, IApiPlayerListReq, IApiPlayerListRes, IApiRoomCreateReq, IApiRoomCreateRes } from "./Common/Api";
+import { RoomManager } from "./Biz/RoomManager";
 
 symlinkCommon();
 
@@ -50,6 +51,22 @@ server.setApi(ApiMsgEnum.ApiPlayerList, (connection: Connection, data: IApiPlaye
     return {
         list: PlayerManager.Instance.getPlayersView(),
     };
+});
+
+server.setApi(ApiMsgEnum.ApiRoomCreate, (connection: Connection, data: IApiRoomCreateReq): IApiRoomCreateRes => {
+    if(connection.playerId) {
+        const newRoom = RoomManager.Instance.createRoom();
+        const room = RoomManager.Instance.joinRoom(newRoom.roomId, connection.playerId);
+        if(room) {
+            return {
+                room: RoomManager.Instance.getRoomView(room),
+            };
+        } else{
+            throw new Error('房间不存在');
+        }
+    } else {
+        throw new Error('玩家未登陆');
+    }
 });
 
 server.start().then(() => {

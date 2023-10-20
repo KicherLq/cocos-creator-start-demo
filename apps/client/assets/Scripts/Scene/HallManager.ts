@@ -5,6 +5,9 @@ import { NetWorkManager } from '../Global/NetWorkManager';
 import { IApiPlayerListRes } from '../../../../server/src/Common/Api';
 import { instantiate } from 'cc';
 import { PlayerManager } from '../UI/PlayerManager';
+import DataManager from '../Global/DataManager';
+import { director } from 'cc';
+import { SceneEnum } from '../Enum';
 const { ccclass, property } = _decorator;
 
 @ccclass('HallManager')
@@ -14,6 +17,10 @@ export class HallManager extends Component {
 
     @property(Prefab)
     playerPrefab: Prefab;
+
+    protected onLoad(): void {
+        director.preloadScene(SceneEnum.Room);
+    }
 
     start() {
         NetWorkManager.Instance.listenMessage(ApiMsgEnum.MsgPlayerList, this.renderPlayer, this);
@@ -54,6 +61,17 @@ export class HallManager extends Component {
         }
     }
 
+    async handleCreateRoom() {
+        const { success, error, res } = await NetWorkManager.Instance.callApi(ApiMsgEnum.ApiRoomCreate, {});
+        if(!success) {
+            console.error(error);
+            return;
+        }
+
+        DataManager.Instance.roomInfo = res.room;
+        console.log('DataManager.Instance.roomInfo', DataManager.Instance.roomInfo);
+        director.loadScene(SceneEnum.Room);
+    }
 }
 
 

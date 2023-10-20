@@ -9,6 +9,7 @@ import { Node } from "cc";
 import { BulletManager } from '../Entity/Bullet/BulletManager';
 import EventManager from "./EventManager";
 import { EventEnum } from "../Enum";
+import { IRoom } from '../Common/Api';
 
 const ACTOR_SPEED = 100;
 const BULLET_SPEED = 600;
@@ -27,6 +28,7 @@ export default class DataManager extends Singleton {
     frameId: number = 1;
     jm: JoyStickManager;
     stage: Node;
+    roomInfo: IRoom;
     actorMap: Map<number, ActorManager> = new Map();
     bulletMap: Map<number, BulletManager> = new Map();
     prefabMap: Map<string, Prefab> = new Map();
