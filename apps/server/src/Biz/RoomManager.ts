@@ -42,13 +42,13 @@ export class RoomManager extends Singleton {
         }
     }
 
-    // public syncPlayers() {
-    //     for (const player of this.__players) {
-    //         player.connection.sendMessage(ApiMsgEnum.MsgPlayerList, {
-    //             list: this.getPlayersView(),
-    //         });
-    //     }
-    // }
+    public syncRooms() {
+        for (const player of PlayerManager.Instance.players) {
+            player.connection.sendMessage(ApiMsgEnum.MsgRoomList, {
+                list: this.getRoomsView(),
+            });
+        }
+    }
 
     public getRoomView({ roomId, players }: Room) {
         return {

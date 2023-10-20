@@ -8,6 +8,8 @@ import { PlayerManager } from '../UI/PlayerManager';
 import DataManager from '../Global/DataManager';
 import { director } from 'cc';
 import { SceneEnum } from '../Enum';
+import { IApiRoomListRes } from '../Common/Api';
+import { RoomManager } from '../UI/RoomManager';
 const { ccclass, property } = _decorator;
 
 @ccclass('HallManager')
@@ -18,18 +20,28 @@ export class HallManager extends Component {
     @property(Prefab)
     playerPrefab: Prefab;
 
+    @property(Node)
+    roomContainer: Node;
+
+    @property(Prefab)
+    roomPrefab: Prefab
+
     protected onLoad(): void {
+        NetWorkManager.Instance.listenMessage(ApiMsgEnum.MsgPlayerList, this.renderPlayer, this);
+        NetWorkManager.Instance.listenMessage(ApiMsgEnum.MsgRoomList, this.renderRoom, this);
         director.preloadScene(SceneEnum.Room);
     }
 
     start() {
-        NetWorkManager.Instance.listenMessage(ApiMsgEnum.MsgPlayerList, this.renderPlayer, this);
         this.playerContainer.destroyAllChildren();
+        this.roomContainer.destroyAllChildren();
         this.getPlayers();
+        this.getRooms();
     }
 
     protected onDestroy(): void {
         NetWorkManager.Instance.unListenMessage(ApiMsgEnum.MsgPlayerList, this.renderPlayer, this);
+        NetWorkManager.Instance.unListenMessage(ApiMsgEnum.MsgRoomList, this.renderRoom, this);
     }
 
     async getPlayers() {
@@ -58,6 +70,35 @@ export class HallManager extends Component {
             const data = list[i];
             const node = this.playerContainer.children[i];
             node.getComponent(PlayerManager).init(data);
+        }
+    }
+
+    async getRooms() {
+        const {success, error, res} = await NetWorkManager.Instance.callApi(ApiMsgEnum.ApiRoomList, {});
+        if(!success) {
+            console.error(error);
+            return;
+        }
+        this.renderRoom(res);
+    }
+
+    renderRoom({ list }: IApiRoomListRes) {
+        for (const c of this.roomContainer.children) {
+            c.active = false;
+        }
+
+        while(this.roomContainer.children.length < list.length) {
+            const node = instantiate(this.roomPrefab);
+            node.active = false;
+            node.setParent(this.roomContainer);
+        }
+
+        console.log('renderRoom, the list is: ', list);
+
+        for(let i = 0; i < list.length; ++i) {
+            const data = list[i];
+            const node = this.roomContainer.children[i];
+            node.getComponent(RoomManager).init(data);
         }
     }
 

@@ -31,3 +31,10 @@ export interface IApiRoomCreateReq {
 export interface IApiRoomCreateRes {
     room: IRoom,
 }
+
+export interface IApiRoomListReq {
+}
+
+export interface IApiRoomListRes {
+    list: IRoom[],
+}

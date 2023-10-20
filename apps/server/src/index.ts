@@ -4,7 +4,7 @@ import { ApiMsgEnum } from "./Common/Enum";
 import { MyServer } from "./Core/MyServer";
 import { Connection } from './Core/Connection';
 import { PlayerManager } from "./Biz/PlayerManager";
-import { IApiPlayerJoinReq, IApiPlayerJoinRes, IApiPlayerListReq, IApiPlayerListRes, IApiRoomCreateReq, IApiRoomCreateRes } from "./Common/Api";
+import { IApiPlayerJoinReq, IApiPlayerJoinRes, IApiPlayerListReq, IApiPlayerListRes, IApiRoomCreateReq, IApiRoomCreateRes, IApiRoomListReq, IApiRoomListRes } from "./Common/Api";
 import { RoomManager } from "./Biz/RoomManager";
 
 symlinkCommon();
@@ -53,11 +53,19 @@ server.setApi(ApiMsgEnum.ApiPlayerList, (connection: Connection, data: IApiPlaye
     };
 });
 
+server.setApi(ApiMsgEnum.ApiRoomList, (connection: Connection, data: IApiRoomListReq): IApiRoomListRes => {
+    return {
+        list: RoomManager.Instance.getRoomsView(),
+    };
+});
+
 server.setApi(ApiMsgEnum.ApiRoomCreate, (connection: Connection, data: IApiRoomCreateReq): IApiRoomCreateRes => {
     if(connection.playerId) {
         const newRoom = RoomManager.Instance.createRoom();
         const room = RoomManager.Instance.joinRoom(newRoom.roomId, connection.playerId);
         if(room) {
+            RoomManager.Instance.syncRooms();
+            PlayerManager.Instance.syncPlayers();
             return {
                 room: RoomManager.Instance.getRoomView(room),
             };
