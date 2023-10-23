@@ -22,6 +22,7 @@ export class HallManager extends Component {
     playerPrefab: Prefab;
 
     protected onLoad(): void {
+        director.preloadScene(SceneEnum.Hall);
         NetWorkManager.Instance.listenMessage(ApiMsgEnum.MsgRoom, this.renderPlayer, this);
     }
 
@@ -55,17 +56,17 @@ export class HallManager extends Component {
         }
     }
 
-    // async handleCreateRoom() {
-    //     const { success, error, res } = await NetWorkManager.Instance.callApi(ApiMsgEnum.ApiRoomCreate, {});
-    //     if(!success) {
-    //         console.error(error);
-    //         return;
-    //     }
+    async handleLeaveRoom() {
+        const { success, error, res } = await NetWorkManager.Instance.callApi(ApiMsgEnum.ApiRoomLeave, {});
+        if(!success) {
+            console.error(error);
+            return;
+        }
 
-    //     DataManager.Instance.roomInfo = res.room;
-    //     console.log('DataManager.Instance.roomInfo', DataManager.Instance.roomInfo);
-    //     director.loadScene(SceneEnum.Room);
-    // }
+        DataManager.Instance.roomInfo = null;
+        console.log('DataManager.Instance.roomInfo', DataManager.Instance.roomInfo);
+        director.loadScene(SceneEnum.Hall);
+    }
 }
 
 

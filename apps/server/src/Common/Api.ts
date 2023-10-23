@@ -46,3 +46,8 @@ export interface IApiRoomJoinReq {
 export interface IApiRoomJoinRes {
     room: IRoom,
 }
+
+export interface IApiRoomLeaveReq {
+}
+
+export interface IApiRoomLeaveRes {}

@@ -26,19 +26,26 @@ export class RoomManager extends Singleton {
         return room;
     }
 
-    public removeRoom(roomId: number) {
-        const room = this.__idMapRoom.get(roomId);
-        if(room) {
-            this.__idMapRoom.delete(room.roomId);
-            this.__rooms.delete(room);
-        }
-    }
-
     public joinRoom(roomId: number, playerId: number) {
         const room = this.__idMapRoom.get(roomId);
         if(room) {
             room.join(playerId);
             return room;
+        }
+    }
+    public leaveRoom(roomId: number, playerId: number) {
+        const room = this.__idMapRoom.get(roomId);
+        if(room) {
+            room.leave(playerId);
+        }
+    }
+
+    public closeRoom(roomId: number) {
+        const room = this.__idMapRoom.get(roomId);
+        if(room) {
+            room.close();
+            this.__idMapRoom.delete(room.roomId);
+            this.__rooms.delete(room);
         }
     }
 

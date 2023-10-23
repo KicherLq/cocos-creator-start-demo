@@ -20,6 +20,21 @@ export class Room {
         }
     }
 
+    public leave(playerId: number) {
+        const player = PlayerManager.Instance.idMapPlayer.get(playerId);
+        if(player) {
+            player.roomId = null;
+            this.players.delete(player);
+            if(!this.players.size) {
+                RoomManager.Instance.closeRoom(this.roomId);
+            }
+        }
+    }
+
+    public close() {
+        this.players.clear();
+    }
+
     public sync() {
         for (const player of this.players) {
             player.connection.sendMessage(ApiMsgEnum.MsgRoom, {
