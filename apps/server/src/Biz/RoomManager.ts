@@ -26,6 +26,13 @@ export class RoomManager extends Singleton {
         return room;
     }
 
+    public startRoom(roomId: number) {
+        const room = this.__idMapRoom.get(roomId);
+        if(room) {
+            room.start();
+        }
+    }
+
     public joinRoom(roomId: number, playerId: number) {
         const room = this.__idMapRoom.get(roomId);
         if(room) {

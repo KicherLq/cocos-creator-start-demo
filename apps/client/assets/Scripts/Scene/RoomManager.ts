@@ -10,7 +10,7 @@ import { director } from 'cc';
 import { SceneEnum } from '../Enum';
 import { IApiRoomListRes } from '../Common/Api';
 import { RoomManager } from '../UI/RoomManager';
-import { IMsgRoom } from '../Common/Msg';
+import { IMsgGameStart, IMsgRoom } from '../Common/Msg';
 const { ccclass, property } = _decorator;
 
 @ccclass('HallManager')
@@ -23,7 +23,9 @@ export class HallManager extends Component {
 
     protected onLoad(): void {
         director.preloadScene(SceneEnum.Hall);
+        director.preloadScene(SceneEnum.battle);
         NetWorkManager.Instance.listenMessage(ApiMsgEnum.MsgRoom, this.renderPlayer, this);
+        NetWorkManager.Instance.listenMessage(ApiMsgEnum.MsgGameStart, this.handleGameStart, this);
     }
 
     start() {
@@ -34,6 +36,7 @@ export class HallManager extends Component {
 
     protected onDestroy(): void {
         NetWorkManager.Instance.unListenMessage(ApiMsgEnum.MsgRoom, this.renderPlayer, this);
+        NetWorkManager.Instance.unListenMessage(ApiMsgEnum.MsgGameStart, this.handleGameStart, this);
     }
 
     renderPlayer({ room: {players: list } }: IMsgRoom) {
@@ -66,6 +69,19 @@ export class HallManager extends Component {
         DataManager.Instance.roomInfo = null;
         console.log('DataManager.Instance.roomInfo', DataManager.Instance.roomInfo);
         director.loadScene(SceneEnum.Hall);
+    }
+
+    async handleStartGame() {
+        const { success, error, res } = await NetWorkManager.Instance.callApi(ApiMsgEnum.ApiGameStart, {});
+        if(!success) {
+            console.error(error);
+            return;
+        }
+    }
+
+    handleGameStart({state}: IMsgGameStart) {
+        DataManager.Instance.state = state;
+        director.loadScene(SceneEnum.battle);
     }
 }
 
