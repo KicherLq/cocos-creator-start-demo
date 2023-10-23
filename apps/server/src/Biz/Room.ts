@@ -1,6 +1,8 @@
+import { ApiMsgEnum } from "../Common/Enum";
 import { Connection } from "../Core/Connection";
 import { Player } from "./Player";
 import { PlayerManager } from "./PlayerManager";
+import { RoomManager } from "./RoomManager";
 
 export class Room {
     roomId: number;
@@ -15,6 +17,14 @@ export class Room {
         if(player) {
             player.roomId = this.roomId; 
             this.players.add(player);
+        }
+    }
+
+    public sync() {
+        for (const player of this.players) {
+            player.connection.sendMessage(ApiMsgEnum.MsgRoom, {
+                room: RoomManager.Instance.getRoomView(this),
+            })
         }
     }
 }

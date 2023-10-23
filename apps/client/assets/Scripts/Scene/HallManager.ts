@@ -7,9 +7,10 @@ import { instantiate } from 'cc';
 import { PlayerManager } from '../UI/PlayerManager';
 import DataManager from '../Global/DataManager';
 import { director } from 'cc';
-import { SceneEnum } from '../Enum';
+import { EventEnum, SceneEnum } from '../Enum';
 import { IApiRoomListRes } from '../Common/Api';
 import { RoomManager } from '../UI/RoomManager';
+import EventManager from '../Global/EventManager';
 const { ccclass, property } = _decorator;
 
 @ccclass('HallManager')
@@ -27,6 +28,7 @@ export class HallManager extends Component {
     roomPrefab: Prefab
 
     protected onLoad(): void {
+        EventManager.Instance.on(EventEnum.roomJoin, this.handleJoinRoom, this);
         NetWorkManager.Instance.listenMessage(ApiMsgEnum.MsgPlayerList, this.renderPlayer, this);
         NetWorkManager.Instance.listenMessage(ApiMsgEnum.MsgRoomList, this.renderRoom, this);
         director.preloadScene(SceneEnum.Room);
@@ -40,6 +42,7 @@ export class HallManager extends Component {
     }
 
     protected onDestroy(): void {
+        EventManager.Instance.off(EventEnum.roomJoin, this.handleJoinRoom, this);
         NetWorkManager.Instance.unListenMessage(ApiMsgEnum.MsgPlayerList, this.renderPlayer, this);
         NetWorkManager.Instance.unListenMessage(ApiMsgEnum.MsgRoomList, this.renderRoom, this);
     }
@@ -110,7 +113,21 @@ export class HallManager extends Component {
         }
 
         DataManager.Instance.roomInfo = res.room;
-        console.log('DataManager.Instance.roomInfo', DataManager.Instance.roomInfo);
+        console.log('HallManager.handleCreateRoom: DataManager.Instance.roomInfo', DataManager.Instance.roomInfo);
+        director.loadScene(SceneEnum.Room);
+    }
+
+    async handleJoinRoom(roomId: number) {
+        const { success, error, res } = await NetWorkManager.Instance.callApi(ApiMsgEnum.ApiRoomJoin, {
+            roomId
+        });
+        if(!success) {
+            console.error(error);
+            return;
+        }
+
+        DataManager.Instance.roomInfo = res.room;
+        console.log('HallManager.handleJoinRoom: DataManager.Instance.roomInfo', DataManager.Instance.roomInfo);
         director.loadScene(SceneEnum.Room);
     }
 }

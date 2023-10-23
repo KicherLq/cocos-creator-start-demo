@@ -50,6 +50,13 @@ export class RoomManager extends Singleton {
         }
     }
 
+    public syncRoom(roomId: number) {
+        const room = this.__idMapRoom.get(roomId);
+        if(room) {
+            room.sync();
+        }
+    }
+
     public getRoomView({ roomId, players }: Room) {
         return {
             roomId,
