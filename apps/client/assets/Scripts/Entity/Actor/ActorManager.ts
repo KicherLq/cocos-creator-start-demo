@@ -13,6 +13,7 @@ import EventManager from '../../Global/EventManager';
 import { Tween } from 'cc';
 import { Vec3 } from 'cc';
 import { tween } from 'cc';
+import { toFixed } from '../../Common/Utils';
 const { ccclass, property } = _decorator;
 
 @ccclass('ActorManager')
@@ -52,10 +53,10 @@ export class ActorManager extends EntityManager {
                 id: DataManager.Instance.myPlayerId,
                 type: InputTypeEnum.ActorMove,
                 direction: {
-                    x,
-                    y
+                    x: toFixed(x),
+                    y: toFixed(y)
                 },
-                deltaTime,
+                deltaTime: toFixed(deltaTime),
             });
 
         }

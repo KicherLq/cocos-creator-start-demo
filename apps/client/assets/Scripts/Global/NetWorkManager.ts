@@ -89,7 +89,8 @@ export class NetWorkManager extends Singleton {
             name,
             data,
         }
-        await new Promise(rs => setTimeout(rs, 2000));
+        //手动增加客户端延时
+        // await new Promise(rs => setTimeout(rs, 2000));
         this.__ws.send(JSON.stringify(msg));
     }
 

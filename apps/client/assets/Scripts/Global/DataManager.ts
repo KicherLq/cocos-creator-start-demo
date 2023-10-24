@@ -10,6 +10,7 @@ import { BulletManager } from '../Entity/Bullet/BulletManager';
 import EventManager from "./EventManager";
 import { EventEnum } from "../Enum";
 import { IRoom } from '../Common/Api';
+import { toFixed } from '../Common/Utils';
 
 const ACTOR_SPEED = 100;
 const BULLET_SPEED = 600;
@@ -30,7 +31,7 @@ export default class DataManager extends Singleton {
     stage: Node;
     roomInfo: IRoom;
     lastState: IState;
-    
+
     actorMap: Map<number, ActorManager> = new Map();
     bulletMap: Map<number, BulletManager> = new Map();
     prefabMap: Map<string, Prefab> = new Map();
@@ -82,8 +83,8 @@ export default class DataManager extends Singleton {
                 const actor = this.state.actors.find(e => e.id === id);
                 actor.direction = direction;
 
-                actor.position.x += direction.x * deltaTime * ACTOR_SPEED;
-                actor.position.y += direction.y * deltaTime * ACTOR_SPEED;
+                actor.position.x += toFixed(direction.x * deltaTime * ACTOR_SPEED);
+                actor.position.y += toFixed(direction.y * deltaTime * ACTOR_SPEED);
                 break;
             }
             case InputTypeEnum.Shot: {
@@ -113,8 +114,8 @@ export default class DataManager extends Singleton {
                         //帧同步不能使用引擎内部的碰撞检测系统
                         let distanceX: number = actor.position.x - bullet.position.x;
                         let distanceY: number = actor.position.y - bullet.position.y;
-                        let explosionX: number = (actor.position.x + bullet.position.x) / 2;
-                        let explosionY: number = (actor.position.y + bullet.position.y) / 2;
+                        let explosionX: number = toFixed((actor.position.x + bullet.position.x) / 2);
+                        let explosionY: number = toFixed((actor.position.y + bullet.position.y) / 2);
                         if(distanceX ** 2 + distanceY ** 2 < (ACTOR_RADIUS + BULLET_RADIUS) ** 2) {
                             actor.hp -= BULLET_DAMAGE;
                             EventManager.Instance.emit(EventEnum.explosionBorn, bullet.id, {x: explosionX, y: explosionY});
@@ -130,8 +131,8 @@ export default class DataManager extends Singleton {
                 }
 
                 for (const bullet of bullets) {
-                    bullet.position.x += bullet.direction.x * dt * BULLET_SPEED;
-                    bullet.position.y += bullet.direction.y * dt * BULLET_SPEED;
+                    bullet.position.x += toFixed(bullet.direction.x * dt * BULLET_SPEED);
+                    bullet.position.y += toFixed(bullet.direction.y * dt * BULLET_SPEED);
                 }
                 break;
             }
