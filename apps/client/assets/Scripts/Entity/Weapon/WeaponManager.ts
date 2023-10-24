@@ -56,7 +56,7 @@ export class WeaponManager extends EntityManager {
         const anchorWorldPos = this.__anchor.getWorldPosition();
         const direction = new Vec2(pointWorldPos.x - anchorWorldPos.x, pointWorldPos.y - anchorWorldPos.y).normalize();
 
-        DataManager.Instance.applyInput({
+        EventManager.Instance.emit(EventEnum.clientSync, {
             type: InputTypeEnum.Shot,
             owner: this.__owner,
             position: {
