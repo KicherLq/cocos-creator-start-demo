@@ -58,9 +58,6 @@ export class ActorManager extends EntityManager {
                 deltaTime,
             });
 
-            this.state = EntityStateEnum.Run;
-        } else {
-            this.state = EntityStateEnum.Idle;
         }
     }
 

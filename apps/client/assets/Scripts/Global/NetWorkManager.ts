@@ -84,11 +84,12 @@ export class NetWorkManager extends Singleton {
         });
     }
 
-    sendMessage<T extends keyof IModel['msg']>(name: T, data: IModel['msg'][T]) {
+    async sendMessage<T extends keyof IModel['msg']>(name: T, data: IModel['msg'][T]) {
         const msg = {
             name,
             data,
         }
+        await new Promise(rs => setTimeout(rs, 2000));
         this.__ws.send(JSON.stringify(msg));
     }
 

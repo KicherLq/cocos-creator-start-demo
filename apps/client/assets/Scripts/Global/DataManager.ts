@@ -29,6 +29,8 @@ export default class DataManager extends Singleton {
     jm: JoyStickManager;
     stage: Node;
     roomInfo: IRoom;
+    lastState: IState;
+    
     actorMap: Map<number, ActorManager> = new Map();
     bulletMap: Map<number, BulletManager> = new Map();
     prefabMap: Map<string, Prefab> = new Map();

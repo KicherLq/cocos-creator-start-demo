@@ -11,6 +11,7 @@ export class Room {
     lastTime: number;
     pendingInput: IClientInput[] = [];
     players: Set<Player> = new Set();
+    lastFrameIdMap: Map<number, number> = new Map();
 
     constructor(roomId: number) {
         this.roomId = roomId;
@@ -91,6 +92,7 @@ export class Room {
     private getClientMsg(connection: Connection, data: IMsgClientSync) {
         const { input, frameId } = data;
         this.pendingInput.push(input);
+        this.lastFrameIdMap.set(connection.playerId, frameId);
     }
 
     private sendServerMsg() {
@@ -98,7 +100,7 @@ export class Room {
         this.pendingInput = [];
         for (const player of this.players) {
             player.connection.sendMessage(ApiMsgEnum.MsgServerSync, {
-                lastFrameId: 0,
+                lastFrameId: this.lastFrameIdMap.get(player.id) ?? 0,
                 inputs,
             })
         }

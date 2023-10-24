@@ -15,6 +15,8 @@ import { NetWorkManager } from "../Global/NetWorkManager";
 import EventManager from "../Global/EventManager";
 import { IClientInput } from '../Common/State';
 import { IMsgServerSync } from '../../../../server/src/Common/Msg';
+import { IMsgClientSync } from '../Common/Msg';
+import { deepClone } from '../Utils';
 const { ccclass, property } = _decorator;
 
 @ccclass('BattleManager')
@@ -22,6 +24,7 @@ export class BattleManager extends Component {
     private _stage: Node;
     private _ui: Node;
     private shouldUpdate: boolean = false;
+    private pendingMsg: IMsgClientSync[] = [];
 
     onLoad() {
     }
@@ -55,11 +58,31 @@ export class BattleManager extends Component {
             frameId: DataManager.Instance.frameId++,
         }
         NetWorkManager.Instance.sendMessage(ApiMsgEnum.MsgClientSync, msg);
+
+        //针对角色移动采用预测回滚
+        if(input.type === InputTypeEnum.ActorMove) {
+            DataManager.Instance.applyInput(input);
+            this.pendingMsg.push(msg);
+        }
     }
 
-    private handleServerSync({inputs}: IMsgServerSync) {
+    private handleServerSync({inputs, lastFrameId}: IMsgServerSync) {
+        //回滚至上一个状态
+        DataManager.Instance.state = DataManager.Instance.lastState;
+        //应用服务端输入
         for (const input of inputs) {
             DataManager.Instance.applyInput(input);
+        }
+
+        //记录服务端状态
+        DataManager.Instance.lastState = deepClone(DataManager.Instance.state);
+        //从客户端预测输入中过滤掉服务端已有的输入
+        this.pendingMsg = this.pendingMsg.filter((msg) => 
+            msg.frameId > lastFrameId
+        );
+        //应用客户端输入
+        for (const msg of this.pendingMsg) {
+            DataManager.Instance.applyInput(msg.input);
         }
     }
 
