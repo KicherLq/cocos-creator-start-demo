@@ -1,6 +1,7 @@
 import { _decorator } from "cc";
 import Singleton from "../Base/Singleton";
-import { IModel } from '../../../../server/src/Common/Model';
+import { strdecode, strencode } from "../Common/Utils";
+import { IModel } from "../Common/Model";
 
 interface IItem {
     cb: Function;
@@ -31,6 +32,7 @@ export class NetWorkManager extends Singleton {
                 return;
             }
             this.__ws = new WebSocket(`ws://localhost:${this.PORT}`);
+            this.__ws.binaryType = 'arraybuffer';
             this.__ws.onopen = () => {
                 this.isConnected = true;
                 resolve(true);
@@ -44,10 +46,11 @@ export class NetWorkManager extends Singleton {
                 console.error(error);
                 reject(false);
             };
-            this.__ws.onmessage = (message: MessageEvent) => {
+            this.__ws.onmessage = (message) => {
                 try {
-                    console.log(message.data);
-                    const json = JSON.parse(message.data);
+                    const ta = new Uint8Array(message.data);
+                    const str = strdecode(ta);
+                    const json = JSON.parse(str);
                     const {name, data} = json;
                     if (this.map.has(name)) {
                         this.map.get(name).forEach(({ cb, ctx }) => {
@@ -91,7 +94,21 @@ export class NetWorkManager extends Singleton {
         }
         //手动增加客户端延时
         // await new Promise(rs => setTimeout(rs, 2000));
-        this.__ws.send(JSON.stringify(msg));
+
+        /**
+         * 把字符串转成二进制数组步骤
+         * 1.使用字符编码（会返回TypeArray），得到这个字符串编码成二进制后的数组长度
+         * 2.通过该长度，初始化ArrayBuffer，再通过DataView写入数组
+         * 3.WebSocket使用ArrayBuffer
+         */
+        const str = JSON.stringify(msg);
+        const ta = strencode(str);
+        const ab = new ArrayBuffer(ta.length);
+        const da = new DataView(ab);
+        for (let index = 0; index < ta.length; index++) {
+            da.setUint8(index, ta[index]);
+        }
+        this.__ws.send(da.buffer);
     }
 
     listenMessage<T extends keyof IModel['msg']>(name: T, cb: (args: IModel['msg'][T]) => void, ctx: unknown) {

@@ -2,6 +2,7 @@ import { EventEmitter } from "stream";
 import { MyServer } from "./MyServer";
 import { WebSocket } from "ws";
 import { IModel } from "../Common/Model";
+import { strdecode, strencode } from "../Common/Utils";
 
 interface IItem {
     cb: Function;
@@ -18,7 +19,8 @@ export class Connection extends EventEmitter {
         });
 
         this.__ws.on('message', (buffer: Buffer) => {
-            const str = buffer.toString();
+            const ta = new Uint8Array(buffer);
+            const str = strdecode(ta);
             try {
                 const msg = JSON.parse(str);
                 const {name, data} = msg;
@@ -56,7 +58,10 @@ export class Connection extends EventEmitter {
             name,
             data,
         }
-        this.__ws.send(JSON.stringify(msg));
+        const str = JSON.stringify(msg);
+        const ta = strencode(str);
+        const buffer = Buffer.from(ta);
+        this.__ws.send(buffer);
     }
 
     listenMessage<T extends keyof IModel['msg']>(name: T, cb: (connection: Connection, args: IModel['msg'][T]) => void, ctx: unknown) {
