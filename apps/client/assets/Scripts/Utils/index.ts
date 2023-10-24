@@ -26,3 +26,12 @@ export const deepClone = (obj: any) => {
     
     return res;
 }
+
+/**
+ * 实现伪随机
+ * 公式：seed = (seed * 9301 + 49297) * 233280
+ * @param seed 
+ */
+export const randomBySeed = (seed: number) => {
+    return seed = (seed * 9301 + 49297) * 233280;
+}

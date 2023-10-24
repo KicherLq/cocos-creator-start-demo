@@ -11,6 +11,7 @@ import EventManager from "./EventManager";
 import { EventEnum } from "../Enum";
 import { IRoom } from '../Common/Api';
 import { toFixed } from '../Common/Utils';
+import { randomBySeed } from '../Utils';
 
 const ACTOR_SPEED = 100;
 const BULLET_SPEED = 600;
@@ -74,6 +75,7 @@ export default class DataManager extends Singleton {
 
         ],
         nextBulletId: 1,
+        seed: 1,
     }
 
     applyInput(input: IClientInput) {
@@ -117,7 +119,10 @@ export default class DataManager extends Singleton {
                         let explosionX: number = toFixed((actor.position.x + bullet.position.x) / 2);
                         let explosionY: number = toFixed((actor.position.y + bullet.position.y) / 2);
                         if(distanceX ** 2 + distanceY ** 2 < (ACTOR_RADIUS + BULLET_RADIUS) ** 2) {
-                            actor.hp -= BULLET_DAMAGE;
+                            const random = randomBySeed(this.state.seed);
+                            this.state.seed = random;
+                            const damage = random / 233280 >= 0.5 ? BULLET_DAMAGE * 2 : BULLET_DAMAGE;
+                            actor.hp -= damage;
                             EventManager.Instance.emit(EventEnum.explosionBorn, bullet.id, {x: explosionX, y: explosionY});
                             bullets.splice(i, 1);
                             break;
