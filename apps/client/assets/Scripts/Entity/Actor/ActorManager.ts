@@ -10,6 +10,9 @@ import { WeaponManager } from '../Weapon/WeaponManager';
 import { rad2Angle } from '../../Utils';
 import { ProgressBar } from 'cc';
 import EventManager from '../../Global/EventManager';
+import { Tween } from 'cc';
+import { Vec3 } from 'cc';
+import { tween } from 'cc';
 const { ccclass, property } = _decorator;
 
 @ccclass('ActorManager')
@@ -18,14 +21,19 @@ export class ActorManager extends EntityManager {
     private __wm: WeaponManager = null;
     private __id: number = 1;
     private __hp: ProgressBar = null;
+    private __tw: Tween<unknown> = null;
+    private __targetPos: Vec3 = null;
 
     init(data: IActor) {
         this.bulletType = data.bulletType;
         this.__hp = this.node.getComponentInChildren(ProgressBar);
         this.__id = data.id;
+        this.__tw = null;
+        this.__targetPos = null;
         this.fsm = this.addComponent(ActorStateMachine);
         this.fsm.init(data.type);
 
+        this.node.active = false;
         this.state = EntityStateEnum.Idle;
         const prefeb = DataManager.Instance.prefabMap.get(EntityTypeEnum.Weapon1);
         const weapon = instantiate(prefeb);
@@ -57,8 +65,40 @@ export class ActorManager extends EntityManager {
     }
 
     render(data: IActor) {
+        this.renderPos(data);
+        this.renderDir(data);
+        this.renderHp(data);
+    }
+
+    //使用tween动画解决100ms帧同步下帧率低画面卡顿的问题
+    private renderPos(data: IActor) {
         const {direction, position} = data;
-        this.node.setPosition(position.x, position.y);
+        const newPos = new Vec3(position.x, position.y);
+        if(!this.__targetPos) {
+            this.__targetPos = newPos;
+            this.node.active = true;
+            this.node.setPosition(newPos);
+        } 
+        //由于renderPos每帧都会调用一次，所以需要判断当前是否在执行缓动动画
+        else if(!this.__targetPos.equals(newPos)) {
+            this.__tw?.stop();
+            this.node.setPosition(this.__targetPos);
+            this.__targetPos.set(newPos);
+            this.state = EntityStateEnum.Run;
+            this.__tw = tween(this.node)
+                .to(0.1, {
+                    position: this.__targetPos,
+                })
+                .call(() => {
+                    this.state = EntityStateEnum.Idle;
+                })
+                .start();
+        }
+        // this.node.setPosition(position.x, position.y);
+    }
+
+    private renderDir(data: IActor) {
+        const {direction, position} = data;
         if(direction.x !== 0) {
             this.node.setScale(direction.x > 0 ? 1 : -1, 1);
             this.__hp.node.setScale(direction.x > 0 ? 1 : -1, 1);
@@ -68,7 +108,10 @@ export class ActorManager extends EntityManager {
         const rad = Math.asin(direction.y / side);
         const angle = rad2Angle(rad);
         this.__wm.node.angle = angle;
+    }
 
+    private renderHp(data: IActor) {
         this.__hp.progress = data.hp / this.__hp.totalLength;
+        
     }
 }

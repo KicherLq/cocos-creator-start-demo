@@ -28,7 +28,15 @@ server.on('disconnection', (connection: Connection) => {
     console.log('connection close', server.connections.size);
     console.log('players size before remove: ', PlayerManager.Instance.players.size);
     if(connection.playerId) {
+        const player = PlayerManager.Instance.idMapPlayer.get(connection.playerId);
+
         PlayerManager.Instance.removePlayer(connection.playerId);
+        const roomId = player.roomId;
+        if(roomId) {
+            RoomManager.Instance.leaveRoom(roomId, player.id);
+            RoomManager.Instance.syncRooms();
+            RoomManager.Instance.syncRoom(roomId);
+        }
     }
     PlayerManager.Instance.syncPlayers();
     console.log('players size after remove: ', PlayerManager.Instance.players.size);
